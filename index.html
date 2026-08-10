@@ -4,33 +4,49 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- SEO Meta Tags -->
+<!-- On-Page & Technical SEO Meta Tags -->
 <title>Langkawi Mangrove Tour | Kilim Geoforest Park Boat Tours</title>
-<meta name="description" content="Book Langkawi mangrove tours directly at Kilim Geoforest Park. Private and shared boat tours from 2–4 hours with no platform markup. Fast WhatsApp booking!">
+<meta name="description" content="Book Langkawi mangrove tours at Kilim Geoforest Park. Choose shared or private boat tours for families, couples and groups with direct operator pricing.">
+<meta name="keywords" content="Langkawi mangrove tour, Langkawi mangrove tour price, Kilim Geoforest Park mangrove tour, Kilim mangrove tour, Langkawi private mangrove tour, Langkawi mangrove boat tour, Langkawi mangrove tour package, mangrove tour Langkawi">
 <link rel="canonical" href="https://mangrove-tour-site.vercel.app/">
+<meta name="robots" content="index, follow">
 
 <!-- Open Graph / Social Media -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="Langkawi Mangrove Tour | Kilim Geoforest Park Boat Tours">
 <meta property="og:description" content="Book private and shared mangrove boat tours directly with local operators at Kilim Geoforest Park. Best price guarantee with no platform fees.">
 <meta property="og:url" content="https://mangrove-tour-site.vercel.app/">
+<meta property="og:site_name" content="Langkawi Experience">
 
+<!-- Twitter Card Metadata -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Langkawi Mangrove Tour | Kilim Geoforest Park Boat Tours">
+<meta name="twitter:description" content="Book private and shared mangrove boat tours directly with local operators at Kilim Geoforest Park. Best price guarantee with no platform fees.">
+
+<!-- Asset Preloading & Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 
-<!-- Structured Data (JSON-LD) for Local SEO -->
+<!-- Structured Data (JSON-LD) -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "WebSite",
+      "@id": "https://mangrove-tour-site.vercel.app/#website",
+      "url": "https://mangrove-tour-site.vercel.app/",
+      "name": "Langkawi Experience Mangrove Tours",
+      "description": "Direct boat tour operator at Kilim Geoforest Park, Langkawi."
+    },
+    {
       "@type": "TouristAttraction",
       "@id": "https://mangrove-tour-site.vercel.app/#attraction",
       "name": "Kilim Geoforest Park Mangrove Tour",
       "description": "Guided mangrove boat tours exploring bat caves, eagle watching, limestone cliffs, and floating fish farms in Langkawi.",
-      "touristType": ["Eco-tourist", "Family", "Couples"],
+      "touristType": ["Eco-tourist", "Family", "Couples", "Groups"],
       "location": {
         "@type": "Place",
         "name": "Kilim Geoforest Park Jetty",
@@ -56,6 +72,24 @@
         "addressCountry": "MY"
       },
       "openingHours": "Mo-Su 09:00-17:00"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://mangrove-tour-site.vercel.app/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://mangrove-tour-site.vercel.app/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tours & Pricing",
+          "item": "https://mangrove-tour-site.vercel.app/#packages"
+        }
+      ]
     }
   ]
 }
@@ -67,33 +101,34 @@
   const WHATSAPP_NUMBER = "60199739836";
 </script>
 
-<!-- Floating WhatsApp Button (Mobile-first UX) -->
+<!-- Floating WhatsApp Button -->
 <a href="#" class="floating-wa wa-link" data-msg="Hi! I want to check availability for a Langkawi Mangrove Tour." aria-label="Book via WhatsApp">
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
-  <span>Book on WhatsApp</span>
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+  <span>Book via WhatsApp</span>
 </a>
 
 <header class="site-header">
   <div class="wrap">
     <a href="#top" class="logo">Langkawi<span>Experience</span></a>
-    <nav class="nav-links">
+    <nav class="nav-links" id="site-nav" aria-label="Main Navigation">
+      <a href="#why-direct">Why Book Direct</a>
       <a href="#packages">Tours & Pricing</a>
       <a href="#expect">What to Expect</a>
-      <a href="#about">Why Book Direct</a>
+      <a href="#gallery">Gallery</a>
       <a href="#faq">FAQ</a>
-      <a href="#contact">Contact</a>
+      <a href="#contact">Meeting Point</a>
     </nav>
     <a href="#" class="nav-cta wa-link" data-msg="Hi! I'd like to ask about your mangrove tours.">
       WhatsApp Us
     </a>
-    <button class="nav-toggle" aria-label="Open menu">&#9776;</button>
+    <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="site-nav">&#9776;</button>
   </div>
 </header>
 
 <main id="top">
 
   <!-- ================= HERO SECTION ================= -->
-  <section class="hero">
+  <section class="hero" aria-labelledby="hero-heading">
     <svg class="river-track" viewBox="0 0 1120 700" preserveAspectRatio="none" aria-hidden="true">
       <path d="M -50 120 C 200 180, 250 280, 480 260 C 720 240, 760 380, 1000 420 C 1150 445, 1180 520, 1250 560"
         fill="none" stroke="#eef3ec" stroke-opacity="0.08" stroke-width="90" stroke-linecap="round"/>
@@ -103,52 +138,113 @@
     <div class="wrap">
       <div class="hero-inner">
         <span class="eyebrow">Kilim Geoforest Park · Langkawi</span>
-        <!-- SEO-optimized H1 -->
-        <h1>Langkawi Mangrove Tour at Kilim Geoforest Park</h1>
-        <p>Discover the mangrove with the local operators who run the boats. Private and shared boat tours from Kilim Jetty for couples, families, and groups. No third-party markup.</p>
+        <h1 id="hero-heading">Langkawi Mangrove Tour at Kilim Geoforest Park</h1>
+        <p>Discover the mangrove, with the people who run the boats. Private and shared boat tours departing directly from Kilim Jetty for couples, families, and groups without platform markups.</p>
         <div class="hero-actions">
           <a href="#packages" class="btn btn-primary">View Tours & Prices</a>
-          <a href="#" class="btn btn-ghost wa-link" data-msg="Hi, I'd like to check tour availability for my trip.">Check Availability</a>
+          <a href="#" class="btn btn-ghost wa-link" data-msg="Hi, I'd like to check tour availability for my trip.">Book via WhatsApp</a>
         </div>
         <div class="hero-fleet">
-          <div><strong>4+</strong>private boats</div>
-          <div><strong>2–4 hrs</strong>flexible tour length</div>
-          <div><strong>1–20</strong>guests per boat</div>
+          <div><strong>4+</strong>private boats in fleet</div>
+          <div><strong>2–4 hrs</strong>flexible tour options</div>
+          <div><strong>1–20</strong>guests per boat capacity</div>
         </div>
       </div>
     </div>
   </section>
 
-  <div class="highlights">
+  <div class="highlights" aria-label="Tour Highlights Summary">
     <div class="wrap">
-      <div class="highlight-item"><span class="dot"></span>Bat Cave Explorer</div>
-      <div class="highlight-item"><span class="dot"></span>Eagle Watching</div>
-      <div class="highlight-item"><span class="dot"></span>Crocodile Cave</div>
-      <div class="highlight-item"><span class="dot"></span>Floating Fish Farm</div>
+      <div class="highlight-item"><span class="dot" aria-hidden="true"></span>Bat Cave Explorer</div>
+      <div class="highlight-item"><span class="dot" aria-hidden="true"></span>Eagle Watching</div>
+      <div class="highlight-item"><span class="dot" aria-hidden="true"></span>Crocodile Cave</div>
+      <div class="highlight-item"><span class="dot" aria-hidden="true"></span>Floating Fish Farm</div>
     </div>
   </div>
 
+  <!-- ================= TRUST / WHY BOOK DIRECT ================= -->
+  <section class="about" id="why-direct" aria-labelledby="trust-heading">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Direct Operator Advantage</span>
+        <h2 class="section-title" id="trust-heading">Same boats, same guides — no platform in between</h2>
+        <p class="section-lede">We operate the actual boats at Kilim Geoforest Park Jetty. When you book direct, you get honest local rates, instant WhatsApp support, and complete flexibility.</p>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-points">
+          <div class="about-point">
+            <span class="mark" aria-hidden="true">01</span>
+            <div>
+              <h3>Direct Captain Communication</h3>
+              <p>Chat directly with our jetty team on WhatsApp to adjust departure times, modify guest counts, or make special requests without middleman delays.</p>
+            </div>
+          </div>
+          <div class="about-point">
+            <span class="mark" aria-hidden="true">02</span>
+            <div>
+              <h3>No Third-Party Markups</h3>
+              <p>Booking direct means you pay the authentic local boat owner rates without platform service commissions or booking fees.</p>
+            </div>
+          </div>
+          <div class="about-point">
+            <span class="mark" aria-hidden="true">03</span>
+            <div>
+              <h3>Licensed Local Skippers</h3>
+              <p>Navigated by experienced local boat captains who know Kilim Geoforest Park's tidal channels, eagle feeding grounds, and hidden caves.</p>
+            </div>
+          </div>
+          <div class="about-point">
+            <span class="mark" aria-hidden="true">04</span>
+            <div>
+              <h3>Flexible Weather Scheduling</h3>
+              <p>Need to adjust your boat departure due to flight changes or rain? Booking direct makes schedule tweaks smooth and straightforward.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-row"><span class="num">4+</span><span class="label">private boats in active fleet</span></div>
+          <div class="stat-row"><span class="num">2–20</span><span class="label">capacity per boat (shared/private)</span></div>
+          <div class="stat-row"><span class="num">9AM–5PM</span><span class="label">flexible daily tour departures</span></div>
+          
+          <div class="reviews-block">
+            <div class="rating-summary">⭐ <strong>Direct Booking Service</strong></div>
+            <blockquote class="testimonial">
+              "Very responsive on WhatsApp! They adjusted our tour time without fuss when our flight was delayed. Our guide explained every stop clearly."
+              <cite>— Sarah & Group, Recent Private Tour Guests</cite>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ================= PACKAGES (DECISION-BASED CARDS) ================= -->
-  <section class="packages" id="packages">
+  <section class="packages" id="packages" aria-labelledby="packages-heading">
     <div class="wrap">
       <div class="section-head">
         <span class="eyebrow">Tour Packages & Pricing</span>
-        <h2 class="section-title">Choose the Right Boat for Your Group</h2>
-        <p class="section-lede">Direct departure from Kilim Geoforest Park Jetty. Pick a package below, view pricing, and chat with us on WhatsApp to lock in your date.</p>
+        <h2 class="section-title" id="packages-heading">Choose the Right Boat for Your Group</h2>
+        <p class="section-lede">Direct departure from Kilim Geoforest Park Jetty. Clear pricing options with clear distinctions between per-person shared tours and private boat charters.</p>
       </div>
 
       <div class="package-grid">
 
         <!-- Shared Boat -->
         <article class="package-card">
-          <span class="package-kicker">🛶 Shared Tour · Per Person</span>
+          <span class="package-kicker">🛶 Shared Tour · Per Person Pricing</span>
           <h3>Shared Mangrove Tour</h3>
+          
+          <div class="price-type-badge badge-per-person">PRICE PER PERSON</div>
           <div class="package-price"><strong>RM80</strong> <span>/ adult · RM65 / child</span></div>
-          <p class="package-desc">Join fellow travelers on a set morning route. Includes lunch and key sight stops. Best for solo travelers, couples, or small families.</p>
+          <p class="package-desc">Join fellow travelers on a fixed morning route. Includes lunch and key sightseeing stops. Ideal for solo travelers, couples, or small families.</p>
           
           <div class="card-quick-specs">
-            <div><strong>Best for:</strong> Couples · Solo · Small families</div>
+            <div><strong>Best for:</strong> Couples, Solo Travelers & Small Families</div>
+            <div><strong>Pricing Type:</strong> <span class="highlight-txt">Per Person (RM80 Adult / RM65 Child)</span></div>
             <div><strong>Duration:</strong> ~3.5 hours (Departs 10:30 AM)</div>
+            <div><strong>Capacity:</strong> Shared boat with other guests</div>
           </div>
 
           <details>
@@ -163,24 +259,28 @@
               <em>Excludes: Bat Cave entrance fee (RM2 adult / RM1 child), hotel transfer.</em>
             </div>
           </details>
-          <a href="#" class="pkg-btn wa-link" data-msg="Hi, I'd like to book the Shared Mangrove Tour">Book Shared Tour</a>
+          <a href="#" class="pkg-btn wa-link" data-msg="Hi, I'd like to book the Shared Mangrove Tour (RM80 adult / RM65 child)">Book Shared Tour</a>
         </article>
 
         <!-- Private Small (MOST POPULAR) -->
         <article class="package-card private popular-card">
           <div class="badge-popular">⭐ MOST POPULAR</div>
-          <span class="package-kicker">👨‍👩‍👧‍👦 Private Boat · Up to 10-12 pax</span>
+          <span class="package-kicker">👨‍👩‍👧‍👦 Private Boat · Per Boat Pricing</span>
           <h3>Small Group Private Tour</h3>
-          <div class="package-price">From <strong>RM285</strong> <span>/ boat · up to 10 guests</span></div>
-          <p class="package-desc">Your own boat, your own schedule. Perfect for families wanting privacy, custom pacing, and flexible departure times.</p>
+          
+          <div class="price-type-badge badge-per-boat">PRICE PER BOAT (NOT PER PERSON)</div>
+          <div class="package-price">From <strong>RM285</strong> <span>/ entire boat (up to 10 guests)</span></div>
+          <p class="package-desc">Your own private boat and dedicated captain on your schedule. Perfect for families wanting privacy, custom pacing, and flexible departure times.</p>
           
           <div class="card-quick-specs">
             <div><strong>Best for:</strong> Families & Small Groups</div>
-            <div><strong>Timing:</strong> 9:00 AM – 5:00 PM (Flexible)</div>
+            <div><strong>Pricing Type:</strong> <span class="highlight-txt">Per Boat Flat Rate</span></div>
+            <div><strong>Duration:</strong> 2 to 4 Hours (Flexible Departure)</div>
+            <div><strong>Capacity:</strong> Up to 10–12 Guests Entire Boat</div>
           </div>
 
           <details open>
-            <summary>Pricing by Duration</summary>
+            <summary>Pricing by Duration Tiers</summary>
             <div class="tier-table">
               <div class="tier-row"><span>2 hrs · up to 10 pax</span><span class="amt">RM285 / boat</span></div>
               <div class="tier-row"><span>3 hrs · up to 10 pax</span><span class="amt">RM335 / boat</span></div>
@@ -188,65 +288,73 @@
               <div class="tier-row"><span>3 hrs · up to 12 pax</span><span class="amt">RM420 / boat</span></div>
             </div>
             <div class="included-list">
-              ✓ Private boat, experienced captain, life jackets, flexible timing.<br>
+              ✓ Private boat charter, dedicated captain, life jackets, flexible start timing.<br>
               <em>Excludes: Bat Cave admission, hotel transfer.</em>
             </div>
           </details>
-          <a href="#" class="pkg-btn wa-link" data-msg="Hi, I'd like to ask about the Small Group Private Tour (Up to 10-12 pax)">Book This Private Boat</a>
+          <a href="#" class="pkg-btn wa-link" data-msg="Hi, I'd like to ask about the Small Group Private Tour (Up to 10-12 pax)">Book Small Private Boat</a>
         </article>
 
         <!-- Private Medium -->
         <article class="package-card private">
-          <span class="package-kicker">👥 Private Boat · Up to 15 pax</span>
+          <span class="package-kicker">👥 Private Boat · Per Boat Pricing</span>
           <h3>Medium Group Private Tour</h3>
-          <div class="package-price">From <strong>RM350</strong> <span>/ boat · up to 15 guests</span></div>
-          <p class="package-desc">Spacious private boat for extended families, groups of friends, or birthday trips. Tailor your time on the water.</p>
+          
+          <div class="price-type-badge badge-per-boat">PRICE PER BOAT (NOT PER PERSON)</div>
+          <div class="package-price">From <strong>RM350</strong> <span>/ entire boat (up to 15 guests)</span></div>
+          <p class="package-desc">Spacious private boat charter for extended families, groups of friends, or special trips. Tailor your time on the water.</p>
           
           <div class="card-quick-specs">
-            <div><strong>Best for:</strong> Extended Families & Friends</div>
-            <div><strong>Timing:</strong> 9:00 AM – 5:00 PM (Flexible)</div>
+            <div><strong>Best for:</strong> Extended Families & Travel Groups</div>
+            <div><strong>Pricing Type:</strong> <span class="highlight-txt">Per Boat Flat Rate</span></div>
+            <div><strong>Duration:</strong> 2 to 4 Hours (Flexible Departure)</div>
+            <div><strong>Capacity:</strong> Up to 15 Guests Entire Boat</div>
           </div>
 
           <details>
-            <summary>Pricing by Duration</summary>
+            <summary>Pricing by Duration Tiers</summary>
             <div class="tier-table">
-              <div class="tier-row"><span>2 hours</span><span class="amt">RM350 / boat</span></div>
-              <div class="tier-row"><span>3 hours</span><span class="amt">RM450 / boat</span></div>
-              <div class="tier-row"><span>4 hours</span><span class="amt">RM550 / boat</span></div>
+              <div class="tier-row"><span>2 hours charter</span><span class="amt">RM350 / boat</span></div>
+              <div class="tier-row"><span>3 hours charter</span><span class="amt">RM450 / boat</span></div>
+              <div class="tier-row"><span>4 hours charter</span><span class="amt">RM550 / boat</span></div>
             </div>
             <div class="included-list">
-              ✓ Private boat, life jackets, custom itinerary stops.<br>
+              ✓ Private boat charter, life jackets, custom itinerary stops.<br>
               <em>Excludes: Bat Cave admission, hotel transfer.</em>
             </div>
           </details>
-          <a href="#" class="pkg-btn wa-link" data-msg="Hi, I'd like to ask about the Medium Group Private Tour (15 pax)">Book Medium Group Tour</a>
+          <a href="#" class="pkg-btn wa-link" data-msg="Hi, I'd like to ask about the Medium Group Private Tour (Up to 15 pax)">Book Medium Private Boat</a>
         </article>
 
         <!-- Private Large -->
         <article class="package-card private">
-          <span class="package-kicker">🏢 Private Boat · Up to 20 pax</span>
+          <span class="package-kicker">🏢 Private Boat · Per Boat Pricing</span>
           <h3>Large Group Private Tour</h3>
-          <div class="package-price">From <strong>RM550</strong> <span>/ boat · up to 20 guests</span></div>
-          <p class="package-desc">Dedicated private boat for corporate outings, family reunions, or large travel parties. Zero sharing with outside guests.</p>
+          
+          <div class="price-type-badge badge-per-boat">PRICE PER BOAT (NOT PER PERSON)</div>
+          <div class="package-price">From <strong>RM550</strong> <span>/ entire boat (up to 20 guests)</span></div>
+          <p class="package-desc">Dedicated high-capacity boat for corporate outings, family reunions, or large travel parties. Zero sharing with outside guests.</p>
           
           <div class="card-quick-specs">
-            <div><strong>Best for:</strong> Corporate Outings & Reunions</div>
-            <div><strong>Timing:</strong> 9:00 AM – 5:00 PM (Flexible)</div>
+            <div><strong>Best for:</strong> Corporate Outings & Family Reunions</div>
+            <div><strong>Pricing Type:</strong> <span class="highlight-txt">Per Boat Flat Rate</span></div>
+            <div><strong>Duration:</strong> 2 to 4 Hours (Flexible Departure)</div>
+            <div><strong>Capacity:</strong> Up to 20 Guests Entire Boat</div>
           </div>
 
           <details>
-            <summary>Pricing by Duration</summary>
+            <summary>Pricing by Duration Tiers</summary>
             <div class="tier-table">
-              <div class="tier-row"><span>2 hours</span><span class="amt">RM550 / boat</span></div>
-              <div class="tier-row"><span>3 hours</span><span class="amt">RM650 / boat</span></div>
-              <div class="tier-row"><span>4 hours</span><span class="amt">RM750 / boat</span></div>
+              <div class="tier-row"><span>2 hours charter</span><span class="amt">RM550 / boat</span></div>
+              <div class="tier-row"><span>3 hours charter</span><span class="amt">RM650 / boat</span></div>
+              <div class="tier-row"><span>4 hours charter</span><span class="amt">RM750 / boat</span></div>
             </div>
             <div class="included-list">
-              ✓ Large capacity boat, life jackets, flexible route.<br>
+              ✓ Large capacity private boat, life jackets, flexible route.<br>
               <em>Excludes: Bat Cave admission, hotel transfer.</em>
             </div>
           </details>
-          <a href="#" class="pkg-btn wa-link" data-msg="Hi, I'd like to ask about the Large Group Private Tour (20 pax)">Get Custom Group Quote</a>
+          <a href="#" class="pkg-btn wa-link" data-msg="Hi, I'd like to ask about the Large Group Private Tour (Up to 20 pax)">Book Large Private Boat</a>
         </article>
 
       </div>
@@ -254,173 +362,139 @@
   </section>
 
   <!-- ================= WHAT TO EXPECT ================= -->
-  <section class="expect-section" id="expect">
+  <section class="expect-section" id="expect" aria-labelledby="expect-heading">
     <div class="wrap">
       <div class="section-head">
         <span class="eyebrow">How It Works</span>
-        <h2 class="section-title">What to Expect on Your Tour</h2>
-        <p class="section-lede">A seamless experience from booking to stepping off the boat back at the jetty.</p>
+        <h2 class="section-title" id="expect-heading">What to Expect on Your Mangrove Tour</h2>
+        <p class="section-lede">A seamless experience from initial WhatsApp booking to stepping off the boat back at Kilim Jetty.</p>
       </div>
 
       <div class="steps-grid">
         <div class="step-card">
-          <div class="step-num">01</div>
-          <h4>Meet at Kilim Jetty</h4>
+          <div class="step-num" aria-hidden="true">01</div>
+          <h3>Meet at Kilim Jetty</h3>
           <p>Arrive 15 minutes before your scheduled departure time at Kilim Geoforest Park Jetty. Free parking is available on site.</p>
         </div>
         <div class="step-card">
-          <div class="step-num">02</div>
-          <h4>Cruise the Mangroves</h4>
+          <div class="step-num" aria-hidden="true">02</div>
+          <h3>Cruise the Mangroves</h3>
           <p>Glide along calm emerald river channels surrounded by vertical limestone karst formations and dense mangrove forests.</p>
         </div>
         <div class="step-card">
-          <div class="step-num">03</div>
-          <h4>Caves & Wildlife</h4>
+          <div class="step-num" aria-hidden="true">03</div>
+          <h3>Caves & Wildlife</h3>
           <p>Watch sea eagles swoop for food, explore ancient bat caves with stalactites, visit Crocodile Cave, and stop at a floating fish farm.</p>
         </div>
         <div class="step-card">
-          <div class="step-num">04</div>
-          <h4>Return & Relax</h4>
+          <div class="step-num" aria-hidden="true">04</div>
+          <h3>Return & Relax</h3>
           <p>Finish your 2 to 4-hour adventure safely back at the jetty, or stop for fresh seafood at the floating restaurant.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ================= ABOUT / REASONS ================= -->
-  <section class="about" id="about">
-    <div class="wrap">
-      <div class="section-head">
-        <span class="eyebrow">Why Book Direct</span>
-        <h2 class="section-title">Same boats, same local guides — no third-party markups</h2>
-        <p class="section-lede">We operate the actual boats you see listed on travel platforms. When you book directly with us, you deal straight with the crew and get the best direct pricing.</p>
-      </div>
-
-      <div class="about-grid">
-        <div class="about-points">
-          <div class="about-point">
-            <span class="mark">01</span>
-            <div>
-              <h4>Direct Captain Communication</h4>
-              <p>Chat directly with our team on WhatsApp to change departure times, adjust guest counts, or make special requests.</p>
-            </div>
-          </div>
-          <div class="about-point">
-            <span class="mark">02</span>
-            <div>
-              <h4>No Agent Commissions</h4>
-              <p>Booking direct means you pay the honest local operator rate without middleman markups.</p>
-            </div>
-          </div>
-          <div class="about-point">
-            <span class="mark">03</span>
-            <div>
-              <h4>Experienced Local Crew</h4>
-              <p>Navigated by licensed local boat captains who know Kilim Geoforest Park's hidden river routes and wildlife spots.</p>
-            </div>
-          </div>
-          <div class="about-point">
-            <span class="mark">04</span>
-            <div>
-              <h4>Flexible Schedule</h4>
-              <p>Need to shift your departure due to rain or hotel breakfast? Direct booking makes schedule tweaks simple.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="stat-card">
-          <div class="stat-row"><span class="num">4+</span><span class="label">private boats in active fleet</span></div>
-          <div class="stat-row"><span class="num">2–20</span><span class="label">capacity per boat (shared/private)</span></div>
-          <div class="stat-row"><span class="num">9AM–5PM</span><span class="label">flexible daily tour departures</span></div>
-          
-          <!-- Testimonials Block -->
-          <div class="reviews-block">
-            <div class="rating-summary">⭐⭐⭐⭐⭐ <strong>4.9/5</strong> rated by travelers</div>
-            <blockquote class="testimonial">
-              "Very responsive on WhatsApp! They adjusted our tour time without fuss when our flight was delayed. Our guide explained every stop clearly."
-              <cite>— Sarah & Group, Recent Private Tour Guests</cite>
-            </blockquote>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- ================= GALLERY ================= -->
-  <section class="gallery" id="gallery">
+  <section class="gallery" id="gallery" aria-labelledby="gallery-heading">
     <div class="wrap">
       <div class="section-head">
-        <span class="eyebrow">Gallery</span>
-        <h2 class="section-title">Life Along the Kilim River</h2>
-        <p class="section-lede">Real sights from our daily mangrove tours across Kilim Geoforest Park.</p>
+        <span class="eyebrow">Visual Highlights</span>
+        <h2 class="section-title" id="gallery-heading">Life Along the Kilim River</h2>
+        <p class="section-lede">Real sights from daily mangrove tours across Kilim Geoforest Park, Langkawi.</p>
       </div>
       <div class="gallery-grid">
-        <!-- Swap these placeholders with real <img> tags once photos are uploaded -->
-        <div class="gallery-placeholder g1">Bat Cave Exploration</div>
-        <div class="gallery-placeholder">Eagle Feeding Sight</div>
-        <div class="gallery-placeholder">Our Private Boat Fleet</div>
-        <div class="gallery-placeholder">Floating Fish Farm</div>
-        <div class="gallery-placeholder">Crocodile Cave Pass</div>
-        <div class="gallery-placeholder">Andaman Sea Sunset</div>
+        <div class="gallery-placeholder g1">
+          <span>Bat Cave Exploration (Gua Kelawar)</span>
+        </div>
+        <div class="gallery-placeholder">
+          <span>Eagle Watching Sight</span>
+        </div>
+        <div class="gallery-placeholder">
+          <span>Our Private Boat Fleet</span>
+        </div>
+        <div class="gallery-placeholder">
+          <span>Floating Fish Farm</span>
+        </div>
+        <div class="gallery-placeholder">
+          <span>Crocodile Cave Pass</span>
+        </div>
+        <div class="gallery-placeholder">
+          <span>Andaman Sea & Karst Outcrops</span>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- ================= FAQ SECTION ================= -->
-  <section class="faq-section" id="faq">
+  <section class="faq-section" id="faq" aria-labelledby="faq-heading">
     <div class="wrap">
       <div class="section-head">
-        <span class="eyebrow">FAQ</span>
-        <h2 class="section-title">Frequently Asked Questions</h2>
-        <p class="section-lede">Everything you need to know before booking your Langkawi mangrove tour.</p>
+        <span class="eyebrow">Frequently Asked Questions</span>
+        <h2 class="section-title" id="faq-heading">Got Questions About Kilim Mangrove Tours?</h2>
+        <p class="section-lede">Everything you need to know before booking your Langkawi boat trip directly with our operators.</p>
       </div>
 
       <div class="faq-accordion">
         <details class="faq-item">
-          <summary>Where does the tour start and depart from?</summary>
+          <summary>Where does the Langkawi mangrove tour start?</summary>
           <div class="faq-answer">
-            <p>All tour packages depart directly from <strong>Kilim Geoforest Park Jetty</strong> in Langkawi. Exact Google Maps coordinates and directions will be sent upon booking confirmation.</p>
+            <p>All our boat tours depart directly from <strong>Kilim Geoforest Park Jetty</strong> in Langkawi. Exact Google Maps coordinates and location links are shared immediately upon WhatsApp confirmation.</p>
           </div>
         </details>
 
         <details class="faq-item">
           <summary>How long is the mangrove tour?</summary>
           <div class="faq-answer">
-            <p>Private tours are available in 2-hour, 3-hour, and 4-hour durations. Shared tours run approximately 3.5 hours including lunch.</p>
+            <p>Private boat tours can be chartered for <strong>2 hours, 3 hours, or 4 hours</strong>. Shared boat tours run approximately <strong>3.5 hours</strong> including lunch.</p>
           </div>
         </details>
 
         <details class="faq-item">
-          <summary>Are prices charged per boat or per person?</summary>
+          <summary>Is the price per person or per boat?</summary>
           <div class="faq-answer">
-            <p>Private tours are priced <strong>per boat</strong> for up to the maximum capacity of that boat (e.g., RM285 per boat for up to 10 guests). Only the Shared Tour is priced per person (RM80 adult / RM65 child).</p>
+            <p>Private tours are priced <strong>per boat</strong> for up to the maximum capacity of that vessel (e.g., RM285 flat rate for up to 10 guests). Only the Shared Tour is charged <strong>per person</strong> (RM80 adult / RM65 child).</p>
           </div>
         </details>
 
         <details class="faq-item">
-          <summary>Is hotel transfer included in the package?</summary>
+          <summary>How many people can join a private boat?</summary>
           <div class="faq-answer">
-            <p>Hotel transfers are not included in the standard package pricing. Guests usually travel by Grab or rental vehicle to Kilim Jetty. Transfer arrangements can be organized upon request via WhatsApp.</p>
+            <p>We offer three private boat sizes: Small Boats (up to 10-12 pax), Medium Boats (up to 15 pax), and Large Boats (up to 20 pax).</p>
           </div>
         </details>
 
         <details class="faq-item">
-          <summary>How do I book and pay?</summary>
+          <summary>Is hotel transfer included in the price?</summary>
           <div class="faq-answer">
-            <p>Simply click any WhatsApp button on this page with your preferred date, tour duration, and number of guests. Our team will instantly verify availability and share payment/deposit details.</p>
+            <p>Hotel transfers are not included in standard boat packages. Most guests travel to Kilim Jetty via Grab or rental vehicle. If you require transfer assistance, feel free to ask us on WhatsApp.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>What should I bring on the boat?</summary>
+          <div class="faq-answer">
+            <p>We recommend bringing comfortable light clothing, sunscreen, sunglasses, a hat, a camera, and small cash for the Bat Cave entrance fee (RM2 adult / RM1 child).</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>How do I book and lock in my slot?</summary>
+          <div class="faq-answer">
+            <p>Simply click any WhatsApp button on this site to chat directly with our team. State your preferred date, tour type, and estimated guest count to receive instant availability and confirmation details.</p>
           </div>
         </details>
       </div>
     </div>
   </section>
 
-  <!-- ================= CONTACT ================= -->
-  <section class="contact" id="contact">
+  <!-- ================= CONTACT & LOCATION ================= -->
+  <section class="contact" id="contact" aria-labelledby="contact-heading">
     <div class="wrap">
       <div class="section-head">
-        <span class="eyebrow">Contact & Location</span>
-        <h2 class="section-title">Ready to Explore Kilim Geoforest?</h2>
-        <p class="section-lede">Send us a direct message on WhatsApp for instant booking or custom group inquiries.</p>
+        <span class="eyebrow">Meeting Point & Direct Booking</span>
+        <h2 class="section-title" id="contact-heading">Ready to Explore Kilim Geoforest?</h2>
+        <p class="section-lede">Send us a direct WhatsApp message to reserve your boat or request custom group scheduling.</p>
       </div>
 
       <div class="contact-grid">

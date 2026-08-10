@@ -7,25 +7,25 @@ document.addEventListener("DOMContentLoaded", () => {
     link.rel = "noopener";
   });
 
-  // Mobile nav toggle: reveal a simple stacked menu
+  // Mobile nav toggle using accessible class toggling
   const toggle = document.querySelector(".nav-toggle");
   const links = document.querySelector(".nav-links");
   if (toggle && links) {
     toggle.addEventListener("click", () => {
-      const open = links.style.display === "flex";
-      links.style.display = open ? "none" : "flex";
-      links.style.flexDirection = "column";
-      links.style.position = "absolute";
-      links.style.top = "68px";
-      links.style.left = "0";
-      links.style.right = "0";
-      links.style.background = "#132920";
-      links.style.padding = "20px 28px";
-      links.style.gap = "16px";
+      const isActive = links.classList.toggle("is-active");
+      toggle.setAttribute("aria-expanded", isActive ? "true" : "false");
+    });
+
+    // Close menu when clicking nav items on mobile
+    links.querySelectorAll("a").forEach((navAnchor) => {
+      navAnchor.addEventListener("click", () => {
+        links.classList.remove("is-active");
+        toggle.setAttribute("aria-expanded", "false");
+      });
     });
   }
 
-  // Footer year
+  // Set current year dynamically in footer
   const yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 });
