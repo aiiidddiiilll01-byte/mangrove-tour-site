@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   // Build every WhatsApp link from WHATSAPP_NUMBER + each button's data-msg
   document.querySelectorAll(".wa-link").forEach((link) => {
-    const msg = encodeURIComponent(link.dataset.msg || "Hi, I'd like to ask about your mangrove tours");
+    const msg = encodeURIComponent(link.dataset.msg || "Hi, I'd like to ask about your mangrove tours with LangkawiExpedition");
     link.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${msg}`;
     link.target = "_blank";
     link.rel = "noopener";
