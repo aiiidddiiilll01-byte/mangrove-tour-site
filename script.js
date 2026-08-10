@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Dynamic WhatsApp link constructor targeting WHATSAPP_NUMBER
+  // Build every WhatsApp link from WHATSAPP_NUMBER + each button's data-msg
   document.querySelectorAll(".wa-link").forEach((link) => {
     const msg = encodeURIComponent(link.dataset.msg || "Hi, I'd like to ask about your mangrove tours");
     link.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${msg}`;
@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
     link.rel = "noopener";
   });
 
-  // Accessible mobile nav toggle
+  // Mobile nav toggle
   const toggle = document.querySelector(".nav-toggle");
   const links = document.querySelector(".nav-links");
   if (toggle && links) {
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Dynamic footer year
+  // Set current year dynamically in footer
   const yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 });
