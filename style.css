@@ -796,3 +796,23 @@ footer .wrap {
   outline: 2px solid var(--amber);
   outline-offset: 2px;
 }
+
+/* ---------- Custom Header Logo Styling ---------- */
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  height: 40px; /* Laraskan ketinggian mengikut kesesuaian header */
+  width: auto;  /* Kekalkan nisbah saiz gambar */
+  object-fit: contain;
+}
+
+/* Responsif untuk skrin mudah alih */
+@media (max-width: 860px) {
+  .logo-img {
+    height: 32px;
+  }
+}
