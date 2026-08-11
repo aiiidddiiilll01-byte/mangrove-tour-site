@@ -825,3 +825,8 @@ footer .wrap {
     max-height: 50px;
   }
 }
+
+/* Memastikan semua pautan navigasi tidak pecah baris */
+.nav-links a {
+  white-space: nowrap;
+}
