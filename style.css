@@ -797,11 +797,10 @@ footer .wrap {
   outline-offset: 2px;
 }
 
-/* ---------- Custom Header Logo Styling (Pelarasan Saiz) ---------- */
+/* ---------- Custom Header Logo Styling (Lebar & Jelas) ---------- */
 
-/* Besarkan ketinggian bar header jika perlu supaya logo muat dengan selesa */
 .site-header .wrap {
-  height: 80px; /* Asal 68px, dibesarkan ke 80px untuk ruang logo lebih luas */
+  height: 90px; /* Tingkatkan ketinggian header */
 }
 
 .logo {
@@ -810,17 +809,19 @@ footer .wrap {
 }
 
 .logo-img {
-  height: 60px; /* Asal 40px, dibesarkan ke 60px supaya jelas kelihatan */
-  width: auto;  
+  width: 220px; /* Tetapkan lebar logo terus supaya nampak panjang & jelas */
+  height: auto; /* Ketinggian akan ikut nisbah lebar automatik */
+  max-height: 65px;
   object-fit: contain;
 }
 
-/* Khas untuk paparan telefon bimbit */
+/* Responsif untuk paparan telefon bimbit */
 @media (max-width: 860px) {
   .site-header .wrap {
-    height: 70px;
+    height: 75px;
   }
   .logo-img {
-    height: 48px;
+    width: 160px;
+    max-height: 50px;
   }
 }
