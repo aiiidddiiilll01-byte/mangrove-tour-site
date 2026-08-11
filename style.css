@@ -1,5 +1,5 @@
 /* ============================================
-   Kilim Mangrove Tour — Design tokens
+   Kilim Mangrove Tour — Design Tokens
    ============================================ */
 
 :root {
@@ -81,7 +81,7 @@ h1, h2, h3 {
   margin-top: 14px;
 }
 
-/* ---------- River motif ---------- */
+/* ---------- River Motif ---------- */
 
 .river-track {
   position: absolute;
@@ -94,7 +94,7 @@ h1, h2, h3 {
   opacity: 0.5;
 }
 
-/* ---------- Header / nav ---------- */
+/* ---------- Header / Navigation ---------- */
 
 .site-header {
   position: sticky;
@@ -109,23 +109,30 @@ h1, h2, h3 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 68px;
+  height: 90px;
 }
 
 .logo {
-  font-family: var(--font-display);
-  font-size: 19px;
-  color: var(--text-on-dark);
-  font-weight: 600;
+  display: flex;
+  align-items: center;
 }
 
-.logo span { color: var(--moss-light); }
+.logo-img {
+  width: 220px;
+  height: auto;
+  max-height: 65px;
+  object-fit: contain;
+}
 
 .nav-links {
   display: flex;
   gap: 30px;
   font-size: 14px;
   color: var(--text-on-dark-soft);
+}
+
+.nav-links a {
+  white-space: nowrap;
 }
 
 .nav-links a:hover { color: var(--text-on-dark); }
@@ -176,11 +183,6 @@ h1, h2, h3 {
 .hero h1 {
   font-size: clamp(38px, 6vw, 60px);
   margin-bottom: 20px;
-}
-
-.hero h1 em {
-  font-style: italic;
-  color: var(--moss-light);
 }
 
 .hero p {
@@ -275,13 +277,13 @@ h1, h2, h3 {
   flex-shrink: 0;
 }
 
-/* ---------- Generic section ---------- */
+/* ---------- Generic Section ---------- */
 
 section { position: relative; padding: 88px 0; }
 
 .section-head { margin-bottom: 48px; }
 
-/* ---------- Packages ---------- */
+/* ---------- Horizontal Package Cards ---------- */
 
 .packages { background: var(--sand-light); }
 
@@ -292,33 +294,45 @@ section { position: relative; padding: 88px 0; }
   border-bottom: 2px solid var(--amber);
 }
 
-.package-category-head h3 {
+.package-category-head h2 {
   font-family: var(--font-mono);
   font-size: 18px;
   letter-spacing: 0.1em;
   color: var(--forest-dark);
 }
 
+/* Grid bertukar menjadi susunan Flexbox menegak untuk memuatkan kad melintang */
 .package-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
+/* Structural Layout untuk Kad Melintang (Horizontal Row) */
 .package-card {
-  background: #fff;
-  border: 1px solid rgba(23, 32, 25, 0.08);
+  background: #ffffff;
+  border: 1px solid rgba(23, 32, 25, 0.12);
   border-radius: var(--radius-lg);
-  padding: 30px;
+  padding: 24px;
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 24px;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.package-card:hover {
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
 }
 
 .package-card::before {
   content: "";
   position: absolute;
   top: 0; left: 0;
-  width: 4px; height: 100%;
+  width: 5px; height: 100%;
   background: var(--moss);
 }
 
@@ -334,37 +348,42 @@ section { position: relative; padding: 88px 0; }
 
 .package-card.private .package-kicker { color: var(--amber-dark); }
 
-.package-card h3 {
-  font-size: 24px;
-  margin: 10px 0 8px;
+.package-desc {
+  font-size: 14px;
+  color: var(--text-soft);
+  margin-bottom: 16px;
+}
+
+/* Pembahagian Tiga Kolum Di Dalam Kad Melintang */
+.pkg-col-left {
+  flex: 1 1 32%;
+  display: flex;
+  flex-direction: column;
+}
+
+.pkg-col-left h3 {
+  font-size: 20px;
+  margin: 6px 0 8px;
   color: var(--forest-dark);
 }
 
-.package-price {
-  font-family: var(--font-mono);
-  font-size: 15px;
-  color: var(--text);
-  margin-bottom: 14px;
+.pkg-col-middle {
+  flex: 1 1 45%;
+  border-left: 1px solid rgba(23, 32, 25, 0.08);
+  border-right: 1px solid rgba(23, 32, 25, 0.08);
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.package-price span {
-  color: var(--text-soft);
-  font-size: 13px;
+.pkg-col-middle details {
+  border-top: none;
+  padding-top: 0;
+  margin-bottom: 0;
 }
 
-.package-desc {
-  font-size: 15px;
-  color: var(--text-soft);
-  margin-bottom: 20px;
-}
-
-.package-card details {
-  border-top: 1px solid rgba(23, 32, 25, 0.08);
-  padding-top: 16px;
-  margin-bottom: 20px;
-}
-
-.package-card summary {
+.pkg-col-middle summary {
   cursor: pointer;
   font-size: 14px;
   font-weight: 600;
@@ -375,25 +394,62 @@ section { position: relative; padding: 88px 0; }
   justify-content: space-between;
 }
 
-.package-card summary::-webkit-details-marker { display: none; }
+.pkg-col-middle summary::-webkit-details-marker { display: none; }
 
-.package-card summary::after {
-  content: "+";
-  font-size: 18px;
-  color: var(--moss);
+.pkg-col-right {
+  flex: 0 0 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  text-align: right;
 }
 
-.package-card details[open] summary::after { content: "\2212"; }
+.package-price {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  color: var(--text);
+}
+
+.package-price span {
+  color: var(--text-soft);
+  font-size: 12px;
+}
+
+.pkg-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--forest-dark);
+  color: var(--text-on-dark);
+  font-size: 13px;
+  font-weight: 600;
+  padding: 11px 20px;
+  border-radius: 999px;
+  width: 100%;
+}
+
+.pkg-btn:hover { background: var(--forest); }
+
+/* Card Specs & Tables */
+.card-quick-specs {
+  background: var(--sand-light);
+  padding: 10px 12px;
+  border-radius: var(--radius);
+  font-size: 12px;
+  color: var(--text-soft);
+}
 
 .tier-table {
-  margin-top: 14px;
-  font-size: 14px;
+  margin-top: 10px;
+  font-size: 13px;
 }
 
 .tier-row {
   display: flex;
   justify-content: space-between;
-  padding: 7px 0;
+  padding: 5px 0;
   border-bottom: 1px dashed rgba(23, 32, 25, 0.1);
   font-family: var(--font-mono);
 }
@@ -403,47 +459,33 @@ section { position: relative; padding: 88px 0; }
 .tier-row .amt { color: var(--forest-dark); font-weight: 600; }
 
 .included-list {
-  font-size: 13px;
+  font-size: 12px;
   color: var(--text-soft);
-  margin-top: 12px;
-  line-height: 1.8;
+  margin-top: 8px;
+  line-height: 1.6;
 }
 
-.pkg-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: var(--forest-dark);
-  color: var(--text-on-dark);
-  font-size: 14px;
+.popular-card { border: 2px solid var(--amber) !important; }
+
+.badge-popular {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: var(--amber);
+  color: var(--forest-dark);
+  font-family: var(--font-mono);
+  font-size: 10px;
   font-weight: 600;
-  padding: 11px 20px;
+  padding: 3px 8px;
   border-radius: 999px;
-  margin-top: auto;
+  text-transform: uppercase;
 }
 
-.pkg-btn:hover { background: var(--forest); }
-
-/* ---------- Fun Fishing Specific Styling ---------- */
+/* ---------- Fun Fishing Styling ---------- */
 
 .fishing-card {
   border: 2px solid var(--water);
   background: #fcfdfd;
-}
-
-.sub-block {
-  margin-top: 14px;
-  padding-top: 12px;
-  border-top: 1px solid rgba(23, 32, 25, 0.08);
-}
-
-.block-title {
-  display: block;
-  font-family: var(--font-mono);
-  font-size: 11px;
-  letter-spacing: 0.08em;
-  color: var(--forest-dark);
-  margin-bottom: 6px;
 }
 
 .bullet-list {
@@ -465,29 +507,23 @@ section { position: relative; padding: 88px 0; }
   color: var(--amber);
 }
 
-.note-text {
-  display: block;
-  font-size: 11px;
-  color: var(--amber-dark);
-  margin-top: 2px;
-  font-style: italic;
-}
+/* ---------- Lunch Add-On Section ---------- */
 
 .lunch-box {
   margin-top: 14px;
-  padding: 14px;
+  padding: 18px;
   background: #f2f7f3;
-  border-radius: var(--radius);
+  border-radius: var(--radius-lg);
   border: 1px solid rgba(76, 122, 90, 0.2);
 }
 
 .lunch-header {
   display: flex;
-  flex-direction: column;
-  gap: 4px;
-  margin-bottom: 8px;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
   font-weight: 600;
-  font-size: 13px;
+  font-size: 14px;
   color: var(--forest-dark);
 }
 
@@ -495,10 +531,9 @@ section { position: relative; padding: 88px 0; }
   background: var(--moss);
   color: #fff;
   font-family: var(--font-mono);
-  font-size: 10px;
+  font-size: 11px;
   padding: 3px 8px;
   border-radius: 4px;
-  width: fit-content;
 }
 
 .upgrade-box {
@@ -510,25 +545,18 @@ section { position: relative; padding: 88px 0; }
   background: var(--amber);
   color: #fff;
   font-family: var(--font-mono);
-  font-size: 10px;
+  font-size: 11px;
   padding: 3px 8px;
   border-radius: 4px;
-  width: fit-content;
-}
-
-.lunch-subnote {
-  font-size: 12px;
-  color: var(--text-soft);
-  margin-bottom: 6px;
 }
 
 .menu-list {
   list-style: none;
-  font-size: 12px;
+  font-size: 13px;
   color: var(--text-soft);
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 4px;
+  gap: 6px;
 }
 
 .menu-list li::before {
@@ -536,18 +564,18 @@ section { position: relative; padding: 88px 0; }
   color: var(--moss);
 }
 
-/* ---------- Blog Section ---------- */
+/* ---------- Blog & Expectations ---------- */
 
-.blog-section { background: #fff; }
+.blog-section, .expect-section { background: #fff; }
 
-.blog-grid {
+.blog-grid, .steps-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   margin-top: 36px;
 }
 
-.blog-placeholder-card {
+.blog-placeholder-card, .step-card {
   background: var(--sand-light);
   padding: 24px;
   border-radius: var(--radius-lg);
@@ -563,99 +591,7 @@ section { position: relative; padding: 88px 0; }
   margin-bottom: 8px;
 }
 
-.blog-placeholder-card h4 {
-  font-size: 17px;
-  color: var(--forest-dark);
-  margin-bottom: 8px;
-}
-
-.blog-placeholder-card p {
-  font-size: 13px;
-  color: var(--text-soft);
-}
-
-/* ---------- Floating WhatsApp ---------- */
-
-.floating-wa {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 99;
-  background: #25D366;
-  color: #08331a;
-  font-weight: 600;
-  font-size: 14px;
-  padding: 12px 20px;
-  border-radius: 999px;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.25);
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-@media (min-width: 861px) {
-  .floating-wa { display: none; }
-}
-
-.popular-card { border: 2px solid var(--amber) !important; }
-
-.badge-popular {
-  position: absolute;
-  top: 14px;
-  right: 14px;
-  background: var(--amber);
-  color: var(--forest-dark);
-  font-family: var(--font-mono);
-  font-size: 10px;
-  font-weight: 600;
-  padding: 4px 10px;
-  border-radius: 999px;
-  text-transform: uppercase;
-}
-
-.card-quick-specs {
-  background: var(--sand-light);
-  padding: 12px;
-  border-radius: var(--radius);
-  font-size: 13px;
-  margin-bottom: 16px;
-  color: var(--text-soft);
-}
-
-.expect-section { background: #fff; }
-
-.steps-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-  margin-top: 36px;
-}
-
-.step-card {
-  background: var(--sand-light);
-  padding: 24px;
-  border-radius: var(--radius-lg);
-  border: 1px solid rgba(23, 32, 25, 0.06);
-}
-
-.step-num {
-  font-family: var(--font-mono);
-  font-size: 20px;
-  color: var(--amber);
-  font-weight: 600;
-  margin-bottom: 10px;
-}
-
-.step-card h4 {
-  font-size: 16px;
-  color: var(--forest-dark);
-  margin-bottom: 8px;
-}
-
-.step-card p {
-  font-size: 13px;
-  color: var(--text-soft);
-}
+/* ---------- FAQ Accordion ---------- */
 
 .faq-section { background: var(--sand-light); }
 
@@ -701,7 +637,7 @@ section { position: relative; padding: 88px 0; }
   line-height: 1.6;
 }
 
-/* ---------- Contact ---------- */
+/* ---------- Contact & Location ---------- */
 
 .contact { background: var(--sand); }
 
@@ -734,7 +670,6 @@ section { position: relative; padding: 88px 0; }
   font-size: 12px;
   color: var(--text-soft);
   text-transform: uppercase;
-  letter-spacing: 0.06em;
 }
 
 .contact-row .v { font-size: 15px; font-weight: 600; color: var(--forest-dark); }
@@ -758,6 +693,29 @@ section { position: relative; padding: 88px 0; }
 
 .whatsapp-big:hover { background: #2fe073; }
 
+/* ---------- Floating WhatsApp ---------- */
+
+.floating-wa {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  background: #25D366;
+  color: #08331a;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 12px 20px;
+  border-radius: 999px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+@media (min-width: 861px) {
+  .floating-wa { display: none; }
+}
+
 /* ---------- Footer ---------- */
 
 footer {
@@ -775,15 +733,39 @@ footer .wrap {
   gap: 12px;
 }
 
-/* ---------- Responsive ---------- */
+/* ---------- Media Queries (Mobile / Tablet Responsive) ---------- */
 
 @media (max-width: 860px) {
+  .site-header .wrap { height: 75px; }
+  .logo-img { width: 160px; max-height: 50px; }
   .nav-links, .hero-fleet { display: none; }
   .nav-toggle { display: block; }
+  
   .highlights .wrap { grid-template-columns: repeat(2, 1fr); }
-  .package-grid { grid-template-columns: 1fr !important; }
-  .contact-grid { grid-template-columns: 1fr; }
-  .steps-grid, .blog-grid { grid-template-columns: 1fr; }
+  
+  /* Melaraskan kad melintang menjadi menegak semula di paparan telefon bimbit */
+  .package-card {
+    flex-direction: column;
+    gap: 16px;
+    padding: 20px;
+  }
+  
+  .pkg-col-middle {
+    border-left: none;
+    border-right: none;
+    border-top: 1px dashed rgba(23, 32, 25, 0.12);
+    border-bottom: 1px dashed rgba(23, 32, 25, 0.12);
+    padding: 16px 0;
+  }
+  
+  .pkg-col-right {
+    align-items: stretch;
+    text-align: left;
+    width: 100%;
+    flex: auto;
+  }
+
+  .contact-grid, .steps-grid, .blog-grid { grid-template-columns: 1fr; }
   .menu-list { grid-template-columns: 1fr; }
   section { padding: 60px 0; }
 }
@@ -795,38 +777,4 @@ footer .wrap {
 :focus-visible {
   outline: 2px solid var(--amber);
   outline-offset: 2px;
-}
-
-/* ---------- Custom Header Logo Styling (Lebar & Jelas) ---------- */
-
-.site-header .wrap {
-  height: 90px; /* Tingkatkan ketinggian header */
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-}
-
-.logo-img {
-  width: 220px; /* Tetapkan lebar logo terus supaya nampak panjang & jelas */
-  height: auto; /* Ketinggian akan ikut nisbah lebar automatik */
-  max-height: 65px;
-  object-fit: contain;
-}
-
-/* Responsif untuk paparan telefon bimbit */
-@media (max-width: 860px) {
-  .site-header .wrap {
-    height: 75px;
-  }
-  .logo-img {
-    width: 160px;
-    max-height: 50px;
-  }
-}
-
-/* Memastikan semua pautan navigasi tidak pecah baris */
-.nav-links a {
-  white-space: nowrap;
 }
