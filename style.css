@@ -778,3 +778,64 @@ footer .wrap {
   outline: 2px solid var(--amber);
   outline-offset: 2px;
 }
+/* ============================================
+   Why Book With Us — Horizontal Cards Layout
+   ============================================ */
+
+.why-book-wrapper {
+  margin-top: 48px;
+  padding-top: 36px;
+  border-top: 1px solid rgba(23, 32, 25, 0.1);
+}
+
+.why-book-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 16px;
+}
+
+.why-card {
+  background: #ffffff;
+  padding: 32px 24px;
+  border-radius: 16px;
+  border: 1px solid rgba(23, 32, 25, 0.08);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.03);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.why-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+}
+
+.why-icon {
+  font-size: 42px;
+  margin-bottom: 16px;
+  line-height: 1;
+}
+
+.why-card h3 {
+  font-size: 20px;
+  color: var(--forest-dark);
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.why-card p {
+  font-size: 14px;
+  color: var(--text-soft);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Responsif: bertukar ke 1 kolum bila buka di telefon bimbit */
+@media (max-width: 860px) {
+  .why-book-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
