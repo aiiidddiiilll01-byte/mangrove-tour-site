@@ -78,16 +78,105 @@
         "opens": "09:00",
         "closes": "17:00"
       }
+    },
+    {
+      "@type": "TouristTrip",
+      "@id": "https://mangrove-tour-site.vercel.app/bm.html#trip",
+      "name": "Pakej Lawatan Bot Bakau Langkawi di Kilim Geoforest Park",
+      "description": "Lawatan bot berpandu menerokai Gua Kelawar, Stesen Helang, bukit batu kapur, sangkar ikan terapung, dan trip memancing santai.",
+      "touristType": ["Eco-tourist", "Family", "Couples", "Anglers"],
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Pakej A - 2 Jam Bot Persendirian",
+          "price": "290.00",
+          "priceCurrency": "MYR"
+        },
+        {
+          "@type": "Offer",
+          "name": "Pakej B - 3 Jam Bot Persendirian",
+          "price": "340.00",
+          "priceCurrency": "MYR"
+        },
+        {
+          "@type": "Offer",
+          "name": "Pakej C - 4 Jam Bot Persendirian",
+          "price": "430.00",
+          "priceCurrency": "MYR"
+        },
+        {
+          "@type": "Offer",
+          "name": "Pakej Memancing Santai (Fun Fishing)",
+          "price": "650.00",
+          "priceCurrency": "MYR"
+        },
+        {
+          "@type": "Offer",
+          "name": "Pakej Bot Berkongsi (Sharing)",
+          "price": "80.00",
+          "priceCurrency": "MYR"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://mangrove-tour-site.vercel.app/bm.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Di manakah tempat berlepas lawatan ini?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Semua pakej berlepas terus dari Jeti Pelancongan Sungai Kilim, Mukim Kampung Kilim, 07000 Langkawi, Kedah, Malaysia."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Berapa lamakah tempoh lawatan bot bakau ini?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pakej bot persendirian (private) mempunyai pilihan 2 jam (Pakej A), 3 jam (Pakej B), dan 4 jam (Pakej C) mengikut saiz bot (10/15/20 tempat duduk). Pakej berkongsi mengambil masa anggaran 3.5 jam termasuk makan tengah hari. Pakej Fun Fishing pula mengambil masa 4 jam untuk maksimum 10 pax."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Bagaimana cara menambah set makanan pada pakej persendirian?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Makan tengah hari boleh ditambah pada mana-mana pakej persendirian (A, B, C atau Fun Fishing): Set Makanan A pada RM15/pax, atau Set Makanan B pada RM35/pax (min. 4 pax). Nyatakan sahaja semasa menghubungi kami di WhatsApp."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Bolehkah saya membawa balik gogel yang disewa selepas lawatan?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tidak boleh. 2 gogel yang disediakan dalam Pakej Fun Fishing atau Pakej B/C adalah pinjaman percuma semasa lawatan sahaja dan mesti dipulangkan kepada krew bot selepas selesai lawatan."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Adakah pengangkutan hotel disediakan sekali?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pengangkutan hotel tidak termasuk dalam harga standard pakej. Tetamu biasanya datang menggunakan perkhidmatan Grab atau kenderaan sewa terus ke Jeti Kilim. Pengangkutan boleh diuruskan atas permintaan di WhatsApp."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Bagaimana cara untuk membuat tempahan dan bayaran?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tekan mana-mana butang WhatsApp di laman web ini berserta tarikh pilihan, pakej pilihan, dan bilangan tetamu. Pasukan kami akan menyemak kekosongan dan memberikan butiran pembayaran."
+          }
+        }
+      ]
     }
   ]
 }
 </script>
 </head>
 <body>
-
-<script>
-  const WHATSAPP_NUMBER = "60199739836";
-</script>
 
 <!-- Floating WhatsApp Button -->
 <a href="#" class="floating-wa wa-link" data-msg="Salam, saya nak semak kekosongan Pakej Bot Bakau Langkawi." aria-label="Tempah menerusi WhatsApp">
@@ -98,7 +187,7 @@
 <header class="site-header">
   <div class="wrap">
     <a href="#top" class="logo">
-      <img src="Langkawi Expedition Logo.png" alt="Logo Langkawi Expedition Mangrove Tour" class="logo-img" width="220" height="65">
+      <img src="Langkawi%20Expedition%20Logo.png" alt="Logo Langkawi Expedition Mangrove Tour" class="logo-img" width="220" height="65">
     </a>
     <nav class="nav-links" aria-label="Navigasi Utama" style="gap: 18px; align-items: center;">
       <a href="#packages">Pakej &amp; Harga</a>
@@ -160,7 +249,7 @@
         Sebelum berlayar ke perairan terbuka Laut Andaman, bot anda akan menyusuri terowong batuan semula jadi seperti Gua Buaya dan Gua Kelawar. Anda juga berpeluang berehat di pantai pesisiran yang tenang, melihat hidupan liar dari dekat, dan singgah ke sangkar ikan terapung sepanjang perjalanan.
       </p>
 
-<!-- SEKSYEN KENAPA TEMPAH DENGAN KAMI -->
+      <!-- SEKSYEN KENAPA TEMPAH DENGAN KAMI -->
       <div class="why-book-wrapper" style="margin-top: 48px; padding-top: 36px; border-top: 1px solid rgba(23, 32, 25, 0.1);">
         <span class="eyebrow" style="text-align: center; display: block; margin-bottom: 24px;">Kenapa Tempah Dengan Kami</span>
         
@@ -189,6 +278,7 @@
 
         </div>
       </div>
+    </div>
   </section>
 
   <!-- ================= TOUR PACKAGES ================= -->
@@ -230,9 +320,9 @@
                 <div class="tier-row"><span>Bot 20 Tempat Duduk</span><span class="amt">RM510 / bot</span></div>
               </div>
               <div class="included-list" style="font-style: normal;">
-                <div style="margin-bottom: 4px;"><strong>Included:</strong> Sewa bot persendirian &amp; jaket keselamatan.</div>
-                <div style="margin-bottom: 4px;"><strong>Excluded:</strong> Tiket Gua Kelawar, pengangkutan hotel, makan tengah hari (pilihan tambahan disediakan).</div>
-                <div><strong>Route:</strong> Gua Kelawar, Sangkar Ikan, Stesen Helang, Laut Andaman, Gua Buaya.</div>
+                <div style="margin-bottom: 4px;"><strong>Termasuk:</strong> Sewa bot persendirian &amp; jaket keselamatan.</div>
+                <div style="margin-bottom: 4px;"><strong>Tidak Termasuk:</strong> Tiket Gua Kelawar, pengangkutan hotel, makan tengah hari (pilihan tambahan disediakan).</div>
+                <div><strong>Laluan:</strong> Gua Kelawar, Sangkar Ikan, Stesen Helang, Laut Andaman, Gua Buaya.</div>
               </div>
             </details>
           </div>
@@ -268,9 +358,9 @@
                 <div class="tier-row"><span>Bot 20 Tempat Duduk</span><span class="amt">RM570 / bot</span></div>
               </div>
               <div class="included-list" style="font-style: normal;">
-                <div style="margin-bottom: 4px;"><strong>Included:</strong> Sewa bot persendirian, jaket keselamatan &amp; PERCUMA Sewaan Gogel (2 gogel).</div>
-                <div style="margin-bottom: 4px;"><strong>Excluded:</strong> Tiket Gua Kelawar, pengangkutan hotel, makan tengah hari.</div>
-                <div><strong>Route:</strong> Gua Kelawar, Sangkar Ikan, Stesen Helang, Laut Andaman, Gua Buaya, Pantai (Mandi-Manda).</div>
+                <div style="margin-bottom: 4px;"><strong>Termasuk:</strong> Sewa bot persendirian, jaket keselamatan &amp; PERCUMA Sewaan Gogel (2 gogel).</div>
+                <div style="margin-bottom: 4px;"><strong>Tidak Termasuk:</strong> Tiket Gua Kelawar, pengangkutan hotel, makan tengah hari.</div>
+                <div><strong>Laluan:</strong> Gua Kelawar, Sangkar Ikan, Stesen Helang, Laut Andaman, Gua Buaya, Pantai (Mandi-Manda).</div>
               </div>
             </details>
           </div>
@@ -306,9 +396,9 @@
                 <div class="tier-row"><span>Bot 20 Tempat Duduk</span><span class="amt">RM730 / bot</span></div>
               </div>
               <div class="included-list" style="font-style: normal;">
-                <div style="margin-bottom: 4px;"><strong>Included:</strong> Sewa bot persendirian, jaket keselamatan &amp; PERCUMA Sewaan Gogel (2 gogel).</div>
-                <div style="margin-bottom: 4px;"><strong>Excluded:</strong> Tiket Gua Kelawar, pengangkutan hotel, makan tengah hari.</div>
-                <div><strong>Route:</strong> Gua Kelawar, Sangkar Ikan, Stesen Helang, Laut Andaman, Gua Buaya, Pantai (Mandi-Manda), Pulau Dangli (Bagi Makan Ikan &amp; Snorkeling).</div>
+                <div style="margin-bottom: 4px;"><strong>Termasuk:</strong> Sewa bot persendirian, jaket keselamatan &amp; PERCUMA Sewaan Gogel (2 gogel).</div>
+                <div style="margin-bottom: 4px;"><strong>Tidak Termasuk:</strong> Tiket Gua Kelawar, pengangkutan hotel, makan tengah hari.</div>
+                <div><strong>Laluan:</strong> Gua Kelawar, Sangkar Ikan, Stesen Helang, Laut Andaman, Gua Buaya, Pantai (Mandi-Manda), Pulau Dangli (Bagi Makan Ikan &amp; Snorkeling).</div>
               </div>
             </details>
           </div>
@@ -342,9 +432,9 @@
                 <div class="tier-row"><span>Bot 10 Tempat Duduk</span><span class="amt">RM650 / bot</span></div>
               </div>
               <div class="included-list" style="font-style: normal; margin-top: 6px;">
-                <div style="margin-bottom: 4px;"><strong>Included:</strong> Bot persendirian berserta kapten, jaket keselamatan, PERCUMA Sewaan 2 Gogel, minuman ringan, tali pancing handline &amp; umpan.</div>
-                <div style="margin-bottom: 4px;"><strong>Excluded:</strong> Tiket Gua Kelawar, pengangkutan hotel, makan tengah hari.</div>
-                <div><strong>Route:</strong> Gua Kelawar, Sangkar Ikan, Stesen Helang, Laut Andaman, Gua Buaya, Pulau Dangli (Bagi Makan Ikan &amp; Snorkeling), Memancing Santai (Fun Fishing).</div>
+                <div style="margin-bottom: 4px;"><strong>Termasuk:</strong> Bot persendirian berserta kapten, jaket keselamatan, PERCUMA Sewaan 2 Gogel, minuman ringan, tali pancing handline &amp; umpan.</div>
+                <div style="margin-bottom: 4px;"><strong>Tidak Termasuk:</strong> Tiket Gua Kelawar, pengangkutan hotel, makan tengah hari.</div>
+                <div><strong>Laluan:</strong> Gua Kelawar, Sangkar Ikan, Stesen Helang, Laut Andaman, Gua Buaya, Pulau Dangli (Bagi Makan Ikan &amp; Snorkeling), Memancing Santai (Fun Fishing).</div>
               </div>
             </details>
           </div>
@@ -486,7 +576,7 @@
   <section class="blog-section" id="blog">
     <div class="wrap">
       <div class="section-head">
-        <span class="eyebrow">Panduan Panduan &amp; Cerita</span>
+        <span class="eyebrow">Panduan &amp; Cerita</span>
         <h2 class="section-title">BLOG</h2>
         <p class="section-lede">Terokai Langkawi dengan panduan percutian dan tips berguna.</p>
       </div>
@@ -640,6 +730,9 @@
   </div>
 </footer>
 
+<script>
+  const WHATSAPP_NUMBER = "60199739836";
+</script>
 <script src="script.js"></script>
 </body>
 </html>
