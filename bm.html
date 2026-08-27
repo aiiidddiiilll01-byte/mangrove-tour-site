@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- Favicon / Tab Logo -->
+  <!-- Favicon / Tab Logo -->
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="apple-touch-icon" href="favicon.png">
 
@@ -78,16 +78,15 @@
   <!-- Desktop Header -->
   <header class="site-header">
     <div class="wrap">
-
-<a href="/" class="logo-link">
-      <img src="logo.png" alt="Langkawi Expedition Logo" class="site-logo" width="220" height="50">
-    </a>
+      <a href="/" class="logo-link">
+        <img src="logo.png" alt="Langkawi Expedition Logo" class="site-logo" width="220" height="50">
+      </a>
       
       <nav class="nav-links" aria-label="Navigasi Utama">
         <a href="#mangrove-tour">TOUR BAKAU</a>
         <a href="#packages">PAKEJ</a>
         <a href="#guide">PANDUAN</a>
-        <a href="index.html" style="font-family: var(--font-mono); font-size: 11px; padding: 2px 6px; border: 1px solid var(--accent-gold); border-radius: 4px; color: var(--accent-gold);">EN</a>
+        <a href="index.html" class="lang-switch">EN</a>
         <a href="#" class="nav-cta-btn wa-link" data-package="Tempahan Melalui Navigasi">TEMPAH SEKARANG</a>
       </nav>
 
@@ -145,6 +144,44 @@
           <div class="why-card">
             <h3>Tempahan Mudah Melalui WhatsApp</h3>
             <p>Semak kekosongan jadual dan sahkan slot waktu berlepas anda secara pantas dengan krew operasi kami.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HIGHLIGHTS & TEMPAT LAWATAN -->
+    <section id="tour-highlights" style="padding-top: 0;">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">Keistimewaan &amp; Lokasi Lawatan</span>
+          <h2 class="section-title">Tempat Menarik Sepanjang Laluan Bot</h2>
+          <p class="section-lede">Daripada pembentukan gua batu kapur purba hingga ke perairan pulau terbuka, berikut adalah tarikan utama yang dilawati dalam pakej Kilim Geoforest kami.</p>
+        </div>
+
+        <div class="why-grid" style="grid-template-columns: repeat(3, 1fr);">
+          <div class="why-card">
+            <h3 style="font-size: 17px; margin-bottom: 8px;">🦇 Gua Kelawar (Bat Cave)</h3>
+            <p style="font-size: 13px; color: var(--text-muted);">Menyusuri laluan jambatan kayu di dalam gua batuan kapur untuk melihat pembentukan stalaktit purba dan ribuan kelawar hidupan liar.</p>
+          </div>
+          <div class="why-card">
+            <h3 style="font-size: 17px; margin-bottom: 8px;">🦅 Stesen Melihat Helang</h3>
+            <p style="font-size: 13px; color: var(--text-muted);">Menyaksikan burung helang merah (Brahminy Kite) dan helang laut dada putih menyambar makanan di permukaan air sungai secara dekat.</p>
+          </div>
+          <div class="why-card">
+            <h3 style="font-size: 17px; margin-bottom: 8px;">🐟 Sangkar Ikan Terapung</h3>
+            <p style="font-size: 13px; color: var(--text-muted);">Pelantar interaktif marin di atas laut untuk melihat pertunjukan ikan sumpit, memberi makan ikan pari, dan mengenali spesies ikan tempatan.</p>
+          </div>
+          <div class="why-card">
+            <h3 style="font-size: 17px; margin-bottom: 8px;">🐊 Gua Buaya (Crocodile Cave)</h3>
+            <p style="font-size: 13px; color: var(--text-muted);">Terowong batuan semula jadi yang unik di mana bot akan menyusuri terus melaluinya apabila paras air sungai mengizinkan.</p>
+          </div>
+          <div class="why-card">
+            <h3 style="font-size: 17px; margin-bottom: 8px;">🏖️ Persinggahan Mandi Pantai</h3>
+            <p style="font-size: 13px; color: var(--text-muted);">Singgah di pantai pesisiran Laut Andaman yang tenang untuk berehat, bersiar-siar, atau mandi-manda (Termasuk dalam Pakej B, Pakej C &amp; Sharing).</p>
+          </div>
+          <div class="why-card">
+            <h3 style="font-size: 17px; margin-bottom: 8px;">🐠 Snorkeling di Pulau Dangli</h3>
+            <p style="font-size: 13px; color: var(--text-muted);">Aktiviti memberi makan ikan laut liar dan snorkeling di perairan jernih Pulau Dangli (Termasuk dalam Pakej C &amp; Fun Fishing).</p>
           </div>
         </div>
       </div>
@@ -461,46 +498,67 @@
       <div class="wrap">
         <div class="section-head">
           <span class="eyebrow">Panduan Lawatan</span>
-          <h2 class="section-title">Soalan Kerap Ditanya (FAQ)</h2>
+          <h2 class="section-title">Panduan &amp; Soalan Lazim (FAQ)</h2>
           <p class="section-lede">Informasi penting sebelum anda memulakan lawatan di Kilim Geoforest Park.</p>
         </div>
 
+        <!-- PANDUAN LAWATAN & BARANG PERLU DIBAWA -->
+        <div style="margin-bottom: 40px; border-bottom: 1px solid var(--border-medium); padding-bottom: 36px;">
+          <h3 style="font-size: 20px; margin-bottom: 16px; color: var(--brand-navy);">Barang Yang Perlu Dibawa</h3>
+          <div class="why-grid" style="grid-template-columns: repeat(3, 1fr);">
+            <div style="background: var(--bg-surface); padding: 20px; border-radius: var(--radius-md); border: 1px solid var(--border-light);">
+              <strong style="display: block; font-size: 14px; margin-bottom: 6px; color: var(--brand-navy);">Pakaian &amp; Kasut</strong>
+              <p style="font-size: 13px; color: var(--text-muted); margin: 0;">Pakaian santai dan ringan, selipar atau sandal yang sesuai basah, baju mandi, serta tuala ganti.</p>
+            </div>
+            <div style="background: var(--bg-surface); padding: 20px; border-radius: var(--radius-md); border: 1px solid var(--border-light);">
+              <strong style="display: block; font-size: 14px; margin-bottom: 6px; color: var(--brand-navy);">Perlindungan Diri</strong>
+              <p style="font-size: 13px; color: var(--text-muted); margin: 0;">Krim pelindung matahari (sunscreen), cermin mata hitam, topi, dan beg kalis air (dry bag) untuk telefon pintar.</p>
+            </div>
+            <div style="background: var(--bg-surface); padding: 20px; border-radius: var(--radius-md); border: 1px solid var(--border-light);">
+              <strong style="display: block; font-size: 14px; margin-bottom: 6px; color: var(--brand-navy);">Wang Tunai Kecil</strong>
+              <p style="font-size: 13px; color: var(--text-muted); margin: 0;">Sediakan wang tunai secukupnya untuk bayaran tiket masuk Gua Kelawar (RM2 dewasa / RM1 kanak-kanak) di kaunter gua[cite: 15, 22].</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ ACCORDION -->
         <div class="faq-grid">
           <details class="faq-item" open>
             <summary>Di manakah tempat berlepas lawatan bot ini?</summary>
             <div class="faq-body">
-              Semua pakej berlepas terus dari <strong>Jeti Pelancongan Sungai Kilim</strong>, Mukim Kampung Kilim, 07000 Langkawi, Kedah, Malaysia.
+              Semua pakej berlepas terus dari <strong>Jeti Pelancongan Sungai Kilim</strong>, Mukim Kampung Kilim, 07000 Langkawi, Kedah, Malaysia[cite: 22].
             </div>
           </details>
 
           <details class="faq-item">
             <summary>Apakah perbezaan antara lawatan 2 Jam, 3 Jam, dan 4 Jam?</summary>
             <div class="faq-body">
-              <strong>2 Jam (Pakej A)</strong> meliputi terowong bakau, Gua Kelawar, Gua Buaya, dan melihat helang. <strong>3 Jam (Pakej B)</strong> menambah persinggahan mandi pantai. <strong>4 Jam (Pakej C)</strong> melengkapkan perjalanan hingga ke Pulau Dangli untuk aktiviti memberi makan ikan dan snorkeling.
+              <strong>2 Jam (Pakej A)</strong> meliputi terowong bakau, Gua Kelawar, Gua Buaya, dan melihat helang[cite: 22]. <strong>3 Jam (Pakej B)</strong> menambah persinggahan mandi pantai[cite: 22]. <strong>4 Jam (Pakej C)</strong> melengkapkan perjalanan hingga ke Pulau Dangli untuk aktiviti memberi makan ikan dan snorkeling[cite: 22].
             </div>
           </details>
 
           <details class="faq-item">
             <summary>Adakah tiket masuk Gua Kelawar termasuk dalam pakej?</summary>
             <div class="faq-body">
-              Tidak. Tiket masuk Gua Kelawar adalah RM2 bagi dewasa dan RM1 bagi kanak-kanak (3–12 tahun), dibayar secara tunai terus di pintu masuk gua.
+              Tidak[cite: 22]. Tiket masuk Gua Kelawar adalah RM2 bagi dewasa dan RM1 bagi kanak-kanak (3–12 tahun), dibayar secara tunai terus di pintu masuk gua[cite: 22].
             </div>
           </details>
 
           <details class="faq-item">
             <summary>Bagaimana syarat pinjaman gogel percuma untuk Pakej B, C dan Fun Fishing?</summary>
             <div class="faq-body">
-              2 unit gogel disediakan secara pinjaman percuma semasa trip berlangsung dan perlu dipulangkan kepada kapten bot sebaik sahaja lawatan tamat.
+              2 unit gogel disediakan secara pinjaman percuma semasa trip berlangsung dan perlu dipulangkan kepada kapten bot sebaik sahaja lawatan tamat[cite: 22].
             </div>
           </details>
 
           <details class="faq-item">
             <summary>Adakah pengangkutan hotel disediakan?</summary>
             <div class="faq-body">
-              Pengangkutan hotel tidak termasuk dalam harga pakej standard. Tetamu boleh memandu atau menaiki Grab terus ke Jeti Kilim. Pengangkutan khas boleh diuruskan atas permintaan di WhatsApp.
+              Pengangkutan hotel tidak termasuk dalam harga pakej standard[cite: 22]. Tetamu boleh memandu atau menaiki Grab terus ke Jeti Kilim[cite: 22]. Pengangkutan khas boleh diuruskan atas permintaan di WhatsApp[cite: 22].
             </div>
           </details>
         </div>
+
       </div>
     </section>
   </main>
@@ -513,65 +571,73 @@
   </div>
 
   <!-- FOOTER -->
-<footer>
-  <div class="wrap">
-    <div class="footer-grid">
-      <!-- Kolum 1: Brand & Bio -->
-      <div class="footer-col">
-        <img src="logo.png" alt="Langkawi Expedition" class="footer-logo" width="180" height="40" style="margin-bottom: 14px;">
-        <p style="font-size: 13px; color: var(--text-inverse-muted); max-width: 32ch; line-height: 1.6; margin-bottom: 16px;">
-          Specialist mangrove boat tours operating daily from Kilim River Tourism Jetty across Kilim Geoforest Park, Langkawi.
-        </p>
+  <footer>
+    <div class="wrap">
+      <div class="footer-grid">
+        <!-- Kolum 1: Brand & Bio -->
+        <div class="footer-col">
+          <img src="logo.png" alt="Langkawi Expedition" class="footer-logo" width="180" height="40" style="margin-bottom: 14px;">
+          <p style="font-size: 13px; color: var(--text-inverse-muted); max-width: 32ch; line-height: 1.6; margin-bottom: 16px;">
+            Pengendali khusus lawatan bot bakau beroperasi setiap hari dari Jeti Pelancongan Sungai Kilim across Kilim Geoforest Park, Langkawi[cite: 22].
+          </p>
+          
+          <!-- Social Icons -->
+          <div class="social-links">
+            <!-- Facebook -->
+            <a href="https://www.facebook.com/profile.php?id=61580825632310" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="social-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.5 9.9v-7H7.9V12h2.6V9.8c0-2.6 1.5-4 3.9-4 1.1 0 2.3.2 2.3.2v2.5h-1.3c-1.3 0-1.7.8-1.7 1.6V12h2.9l-.5 2.9h-2.4v7A10 10 0 0 0 22 12z"/></svg>
+            </a>
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/langkawiexpedition/?hl=en" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="social-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+            </a>
+          </div>
+        </div>
         
-        <!-- Social Icons -->
-        <div class="social-links">
-          <!-- Facebook -->
-          <a href="https://www.facebook.com/profile.php?id=61580825632310" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="social-icon">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.5 9.9v-7H7.9V12h2.6V9.8c0-2.6 1.5-4 3.9-4 1.1 0 2.3.2 2.3.2v2.5h-1.3c-1.3 0-1.7.8-1.7 1.6V12h2.9l-.5 2.9h-2.4v7A10 10 0 0 0 22 12z"/></svg>
-          </a>
-          <!-- Instagram -->
-          <a href="https://www.instagram.com/langkawiexpedition/?hl=en" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="social-icon">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
-          </a>
+        <!-- Kolum 2: Packages -->
+        <div class="footer-col">
+          <h4>Pakej</h4>
+          <ul>
+            <li><a href="#packages">2-Hour Private Tour ⭐</a></li>
+            <li><a href="#packages">3-Hour Private Tour</a></li>
+            <li><a href="#packages">4-Hour Private Tour</a></li>
+            <li><a href="#packages">Sharing Mangrove Tour</a></li>
+            <li><a href="#packages">Fun Fishing Charter</a></li>
+          </ul>
+        </div>
+
+        <!-- Kolum 3: Information -->
+        <div class="footer-col">
+          <h4>Informasi</h4>
+          <ul>
+            <li><a href="#mangrove-tour">Tour Bakau</a></li>
+            <li><a href="#guide">FAQ &amp; Panduan</a></li>
+            <li><a href="index.html">English Version</a></li>
+          </ul>
+        </div>
+
+        <!-- Kolum 4: Meeting Point -->
+        <div class="footer-col">
+          <h4>Lokasi Jeti</h4>
+          <p style="font-size: 13px; color: var(--text-inverse-muted); line-height: 1.6;">
+            Jeti Pelancongan Sungai Kilim,<br>
+            Mukim Kampung Kilim,<br>
+            07000 Langkawi, Kedah.<br>
+            Operating: 9:00 AM – 5:00 PM[cite: 22]
+          </p>
         </div>
       </div>
-      
-      <!-- Kolum 2: Packages -->
-      <div class="footer-col">
-        <h4>Packages</h4>
-        <ul>
-          <li><a href="#packages">2-Hour Private Tour ⭐</a></li>
-          <li><a href="#packages">3-Hour Private Tour</a></li>
-          <li><a href="#packages">4-Hour Private Tour</a></li>
-          <li><a href="#packages">Sharing Mangrove Tour</a></li>
-          <li><a href="#packages">Fun Fishing Charter</a></li>
-        </ul>
-      </div>
 
-      <!-- Kolum 3: Information -->
-      <div class="footer-col">
-        <h4>Information</h4>
-        <ul>
-          <li><a href="#mangrove-tour">Mangrove Tour</a></li>
-          <li><a href="#guide">FAQ &amp; Guide</a></li>
-          <li><a href="bm.html">Bahasa Melayu</a></li>
-        </ul>
-      </div>
-
-      <!-- Kolum 4: Meeting Point -->
-      <div class="footer-col">
-        <h4>Meeting Point</h4>
-        <p style="font-size: 13px; color: var(--text-inverse-muted); line-height: 1.6;">
-          Kilim River Tourism Jetty,<br>
-          Mukim Kampung Kilim,<br>
-          07000 Langkawi, Kedah.<br>
-          Operating: 9:00 AM – 5:00 PM
-        </p>
+      <div class="footer-bottom">
+        <span>&copy; <span id="year">2026</span> Langkawi Expedition. Hak cipta terpelihara.</span>
+        <span>Kilim Geoforest Park, Langkawi</span>
       </div>
     </div>
+  </footer>
 
-    <div class="footer-bottom">
-      <span>&copy; <span id="year">2026</span> Langkawi Expedition. All rights reserved.</span>
-      <span>Kilim Geoforest Park, Langkawi</span>
-    </div>
-  </div>
+  <script>
+    const WHATSAPP_NUMBER = "60199739836";
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
