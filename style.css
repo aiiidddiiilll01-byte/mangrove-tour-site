@@ -791,3 +791,113 @@ footer {
     height: 38px;
   }
 }
+
+/* ==========================================================================
+   CAROUSEL / PHOTO SLIDER
+   ========================================================================== */
+.gallery-slider-section {
+  padding: 40px 0 60px;
+  background-color: var(--bg-base);
+}
+
+.carousel-container {
+  position: relative;
+  max-width: 960px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 24px;
+  box-shadow: var(--shadow-lg);
+  background-color: #000;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+  width: 100%;
+}
+
+.carousel-slide {
+  min-width: 100%;
+  aspect-ratio: 16 / 9;
+  position: relative;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Navigasi Kiri & Kanan */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 41, 63, 0.4);
+  color: #fff;
+  border: none;
+  font-size: 32px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  z-index: 10;
+  backdrop-filter: blur(4px);
+  user-select: none;
+}
+
+.carousel-btn:hover {
+  background: var(--brand-navy);
+  color: var(--accent-gold);
+}
+
+.prev-btn { left: 16px; }
+.next-btn { right: 16px; }
+
+/* Titik / Dots */
+.carousel-dots {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.35);
+  padding: 6px 12px;
+  border-radius: var(--radius-full);
+  backdrop-filter: blur(4px);
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.dot.active {
+  background: var(--accent-gold);
+  transform: scale(1.3);
+}
+
+@media (max-width: 768px) {
+  .carousel-container {
+    border-radius: 16px;
+  }
+  .carousel-slide {
+    aspect-ratio: 4 / 3;
+  }
+  .carousel-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 24px;
+  }
+}
