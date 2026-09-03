@@ -23,3 +23,11 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.langkawiexpedition.com/" />
   </url>
 </urlset>
+
+<!-- Blog Directory -->
+  <url>
+    <loc>https://www.langkawiexpedition.com/blog.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
