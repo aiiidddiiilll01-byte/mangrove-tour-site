@@ -23,23 +23,22 @@ document.addEventListener("DOMContentLoaded", () => {
     yearEl.textContent = new Date().getFullYear();
   }
 
-  // 3. Mobile Navigation Drawer Controller
+// 3. Mobile Navigation Drawer Controller
   const navToggle = document.querySelector(".nav-toggle");
   const navLinks = document.querySelector(".nav-links");
 
   if (navToggle && navLinks) {
     navToggle.addEventListener("click", () => {
-      const isVisible = window.getComputedStyle(navLinks).display !== "none";
-      navLinks.style.display = isVisible ? "none" : "flex";
-      navLinks.style.flexDirection = "column";
-      navLinks.style.position = "absolute";
-      navLinks.style.top = "80px";
-      navLinks.style.left = "0";
-      navLinks.style.right = "0";
-      navLinks.style.background = "#00293F";
-      navLinks.style.padding = "24px";
-      navLinks.style.gap = "18px";
+      navLinks.classList.toggle("is-open");
     });
+
+    // Close menu when a navigation anchor is tapped
+    navLinks.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("is-open");
+      });
+    });
+  }
   }
 
   // 4. Photo Gallery Carousel Controller

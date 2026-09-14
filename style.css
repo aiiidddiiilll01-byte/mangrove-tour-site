@@ -900,4 +900,16 @@ footer {
     height: 36px;
     font-size: 24px;
   }
+@media (max-width: 960px) {
+  .nav-links.is-open {
+    display: flex !important;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    background: #00293F;
+    padding: 24px;
+    gap: 18px;
+  }
 }
