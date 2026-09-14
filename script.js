@@ -39,7 +39,6 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   }
-  }
 
   // 4. Photo Gallery Carousel Controller
   const track = document.getElementById("carouselTrack");
