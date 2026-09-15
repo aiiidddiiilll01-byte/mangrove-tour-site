@@ -1033,7 +1033,7 @@ footer {
     width: 100%;
     max-width: 320px;
   }
-
+}
 @media (max-width: 960px) {
   .nav-links.is-open {
     display: flex !important;
