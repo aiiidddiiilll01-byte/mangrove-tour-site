@@ -230,16 +230,30 @@ h1, h2, h3, h4 {
   font-size: 24px;
 }
 
-/* Hero */
+/* Hero Container */
 .hero {
   background: linear-gradient(180deg, var(--brand-navy) 0%, var(--brand-navy-light) 100%);
   color: var(--text-inverse);
-  padding: 80px 0 90px;
-  position: relative;
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* Center and stack inner content vertically */
+/* Curved Box Mengelilingi Kandungan */
 .hero .wrap {
+  width: 100%;
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 48px 36px;
+  
+  /* Bentuk Box Melengkung & Kesan Kedalaman */
+  background: rgba(0, 28, 43, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 28px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+
+  /* Center dan Vertikal */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -251,17 +265,17 @@ h1, h2, h3, h4 {
 }
 
 .hero h1 {
-  font-size: clamp(32px, 4.8vw, 50px);
+  font-size: clamp(30px, 4.5vw, 48px);
   color: var(--text-inverse);
   max-width: 22ch;
-  margin: 0 auto 18px;
+  margin: 0 auto 16px;
 }
 
 .hero p {
   font-size: 16px;
   color: var(--text-inverse-muted);
   max-width: 52ch;
-  margin: 0 auto 32px;
+  margin: 0 auto 30px;
 }
 
 .hero-actions {
@@ -272,18 +286,18 @@ h1, h2, h3, h4 {
   width: 100%;
 }
 
-/* Vertical stacking for stats */
+/* Stats Horizontal di Bawah */
 .hero-stats {
-  margin: 44px auto 0;
+  margin: 36px auto 0;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  gap: 36px;
+  gap: 20px;
   border-top: 1px solid rgba(255, 255, 255, 0.12);
   padding-top: 24px;
   width: 100%;
-  max-width: 600px;
+  max-width: 560px;
 }
 
 .hero-stats div {
@@ -304,6 +318,31 @@ h1, h2, h3, h4 {
   font-size: 12px;
   color: var(--text-inverse-muted);
 }
+
+/* Penyesuaian Skrin Mobile */
+@media (max-width: 640px) {
+  .hero {
+    padding: 40px 14px;
+  }
+
+  .hero .wrap {
+    padding: 32px 18px;
+    border-radius: 20px;
+  }
+
+  .hero-stats {
+    gap: 12px;
+  }
+
+  .hero-stats strong {
+    font-size: 18px;
+  }
+
+  .hero-stats span {
+    font-size: 11px;
+  }
+}
+
 /* Sections General */
 section {
   padding: 80px 0;
