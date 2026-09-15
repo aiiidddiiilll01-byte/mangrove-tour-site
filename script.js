@@ -101,5 +101,19 @@ document.addEventListener("DOMContentLoaded", () => {
         slideInterval = setInterval(nextSlide, 5000);
       });
     }
+// --- LETAK DI SINI: Touch Swipe untuk Skrin Telefon ---
+    let startX = 0;
+    track.addEventListener("touchstart", (e) => {
+      startX = e.touches[0].clientX;
+    }, { passive: true });
+
+    track.addEventListener("touchend", (e) => {
+      const diff = startX - e.changedTouches[0].clientX;
+      if (diff > 50) {
+        nextSlide(); // Leret ke kiri: paparan gambar seterusnya
+      } else if (diff < -50) {
+        prevSlide(); // Leret ke kanan: paparan gambar sebelumnya
+      }
+    }, { passive: true });
   }
 });

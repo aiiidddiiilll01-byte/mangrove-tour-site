@@ -6,7 +6,7 @@ Plain HTML/CSS/JS. No build step, no framework — this deploys to Vercel as-is.
 
 1. **`index.html`** — near the top of `<body>`, replace the WhatsApp number:
    ```js
-   const WHATSAPP_NUMBER = "60128084008"; // <-- your real business number
+   const WHATSAPP_NUMBER = "60199739836"; // <-- your real business number
    ```
    Format: country code + number, no `+`, no spaces, no dashes.
 
