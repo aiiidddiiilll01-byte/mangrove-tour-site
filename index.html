@@ -34,52 +34,108 @@
   <link rel="stylesheet" href="style.css">
 
   <!-- Schema.org JSON-LD -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "LocalBusiness",
-        "@id": "https://www.langkawiexpedition.com/#business",
-        "name": "Langkawi Expedition",
-        "telephone": "+60199739836",
-        "priceRange": "RM65 - RM730",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Kilim River Tourism Jetty, Mukim Kampung Kilim",
-          "addressLocality": "Langkawi",
-          "postalCode": "07000",
-          "addressRegion": "Kedah",
-          "addressCountry": "MY"
-        },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": 6.4050726,
-          "longitude": 99.855411
-        },
-        "openingHoursSpecification": {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-          "opens": "09:00",
-          "closes": "17:00"
-        }
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TravelAgency",
+      "@id": "https://www.langkawiexpedition.com/#business",
+      "name": "Langkawi Expedition",
+      "image": "https://www.langkawiexpedition.com/logo.png",
+      "url": "https://www.langkawiexpedition.com/",
+      "telephone": "+60199739836",
+      "priceRange": "RM65 - RM730",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Kilim River Tourism Jetty, Mukim Kampung Kilim",
+        "addressLocality": "Langkawi",
+        "postalCode": "07000",
+        "addressRegion": "Kedah",
+        "addressCountry": "MY"
       },
-      {
-        "@type": "TouristTrip",
-        "@id": "https://www.langkawiexpedition.com/#tours",
-        "name": "Langkawi Mangrove Tour at Kilim Geoforest Park",
-        "touristType": ["Eco-tourist", "Family", "Couples", "Anglers"],
-        "offers": [
-          { "@type": "Offer", "name": "Package A - 2 Hour Private Tour", "price": "290.00", "priceCurrency": "MYR" },
-          { "@type": "Offer", "name": "Package B - 3 Hour Private Tour", "price": "340.00", "priceCurrency": "MYR" },
-          { "@type": "Offer", "name": "Package C - 4 Hour Private Tour", "price": "430.00", "priceCurrency": "MYR" },
-          { "@type": "Offer", "name": "Fun Fishing Package", "price": "650.00", "priceCurrency": "MYR" },
-          { "@type": "Offer", "name": "Sharing Mangrove Tour", "price": "80.00", "priceCurrency": "MYR" }
-        ]
-      }
-    ]
-  }
-  </script>
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 6.4050726,
+        "longitude": 99.855411
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        "opens": "09:00",
+        "closes": "17:00"
+      },
+      "sameAs": [
+        "https://www.facebook.com/profile.php?id=61580825632310",
+        "https://www.instagram.com/langkawiexpedition/"
+      ]
+    },
+    {
+      "@type": "TouristTrip",
+      "@id": "https://www.langkawiexpedition.com/#tours",
+      "name": "Langkawi Mangrove Tour at Kilim Geoforest Park",
+      "description": "Mangrove boat tours at Kilim Geoforest Park covering Bat Cave, Crocodile Cave, eagle watching, and Dangli Island.",
+      "provider": {
+        "@id": "https://www.langkawiexpedition.com/#business"
+      },
+      "touristType": ["Eco-tourist", "Family", "Couples", "Anglers"],
+      "offers": [
+        { "@type": "Offer", "name": "Package A - 2 Hour Private Tour", "price": "290.00", "priceCurrency": "MYR", "availability": "https://schema.org/InStock" },
+        { "@type": "Offer", "name": "Package B - 3 Hour Private Tour", "price": "340.00", "priceCurrency": "MYR", "availability": "https://schema.org/InStock" },
+        { "@type": "Offer", "name": "Package C - 4 Hour Private Tour", "price": "430.00", "priceCurrency": "MYR", "availability": "https://schema.org/InStock" },
+        { "@type": "Offer", "name": "Fun Fishing Package", "price": "650.00", "priceCurrency": "MYR", "availability": "https://schema.org/InStock" },
+        { "@type": "Offer", "name": "Sharing Mangrove Tour", "price": "80.00", "priceCurrency": "MYR", "availability": "https://schema.org/InStock" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.langkawiexpedition.com/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Where does the mangrove boat tour depart from?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "All tours depart directly from Kilim River Tourism Jetty, Mukim Kampung Kilim, 07000 Langkawi, Kedah, Malaysia."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the differences between 2-hour, 3-hour, and 4-hour tours?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "2-Hour (Package A) covers the mangrove river channels, Bat Cave, Crocodile Cave, and eagle watching. 3-Hour (Package B) adds a swimming stop at a coastal beach. 4-Hour (Package C) extends out to Dangli Island for fish feeding and snorkeling."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are entrance fees to the Bat Cave included?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Bat Cave (Gua Kelawar) entry is RM2 per adult and RM1 per child (ages 3–12), collected directly at the cave entrance in cash."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does the free goggle rental work for Packages B, C, and Fishing?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "2 goggles are provided as a complimentary rental for use during your tour. They remain the property of the boat and must be returned to the captain upon trip completion."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are hotel transfers included in the tour price?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Hotel transfers are not included in base rates. Guests can easily drive or take Grab directly to Kilim Jetty. Return private transfers can be arranged on request via WhatsApp."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body id="top">
 
