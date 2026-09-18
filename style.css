@@ -192,7 +192,7 @@ h1, h2, h3, h4 {
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 28px;
+  gap: 20px;
 }
 
 .nav-links a {
@@ -201,6 +201,7 @@ h1, h2, h3, h4 {
   letter-spacing: 0.04em;
   color: var(--text-inverse-muted);
   transition: color 0.15s;
+  white-space: nowrap;
 }
 
 .nav-links a:hover,
@@ -210,12 +211,13 @@ h1, h2, h3, h4 {
 
 .nav-cta-btn {
   background-color: var(--accent-gold);
-  color: var(--brand-navy-dark);
+  color: var(--brand-navy-dark) !important;
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.06em;
-  padding: 8px 18px;
+  padding: 8px 16px;
   border-radius: var(--radius-full);
+  white-space: nowrap;
 }
 
 .nav-cta-btn:hover {
