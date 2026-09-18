@@ -2,12 +2,15 @@
  * Langkawi Expedition V2 — Dynamic WhatsApp Routing, Navigation & Carousel
  */
 document.addEventListener("DOMContentLoaded", () => {
-  // 1. Dynamic WhatsApp Routing with context-aware prefilled messaging
+// 1. Dynamic WhatsApp Routing with context-aware prefilled messaging
   const waLinks = document.querySelectorAll(".wa-link");
+  const isBM = window.location.pathname.includes("bm.html");
   
   waLinks.forEach((link) => {
-    const pkg = link.dataset.package || "Langkawi Mangrove Tour";
-    const defaultMsg = `Hi Langkawi Expedition, I would like to check availability for ${pkg}.`;
+    const pkg = link.dataset.package || (isBM ? "Mangrove Tour Langkawi" : "Langkawi Mangrove Tour");
+    const defaultMsg = isBM
+      ? `Salam Langkawi Expedition, saya nak semak kekosongan untuk ${pkg}.`
+      : `Hi Langkawi Expedition, I would like to check availability for ${pkg}.`;
     const encoded = encodeURIComponent(defaultMsg);
     
     if (typeof WHATSAPP_NUMBER !== "undefined") {
