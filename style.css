@@ -875,8 +875,10 @@ footer {
   padding: 3px 8px;
   border: 1px solid var(--accent-gold);
   border-radius: var(--radius-sm);
-  color: var(--accent-gold);
+  color: var(--accent-gold) !important;
   transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
 }
 
 .lang-switch:hover {

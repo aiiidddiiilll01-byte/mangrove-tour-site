@@ -93,18 +93,36 @@ document.addEventListener("DOMContentLoaded", () => {
     if (nextBtn) nextBtn.addEventListener("click", nextSlide);
     if (prevBtn) prevBtn.addEventListener("click", prevSlide);
 
-    // Auto-slide setiap 5 saat
+// Auto-slide setiap 5 saat
     let slideInterval = setInterval(nextSlide, 5000);
+
+    function resetAutoSlide() {
+      clearInterval(slideInterval);
+      slideInterval = setInterval(nextSlide, 5000);
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener("click", () => {
+        nextSlide();
+        resetAutoSlide();
+      });
+    }
+
+    if (prevBtn) {
+      prevBtn.addEventListener("click", () => {
+        prevSlide();
+        resetAutoSlide();
+      });
+    }
 
     // Hentikan seketika auto-slide bila cursor berada atas gambar
     const container = document.querySelector(".carousel-container");
     if (container) {
       container.addEventListener("mouseenter", () => clearInterval(slideInterval));
-      container.addEventListener("mouseleave", () => {
-        slideInterval = setInterval(nextSlide, 5000);
-      });
+      container.addEventListener("mouseleave", () => resetAutoSlide());
     }
-// --- LETAK DI SINI: Touch Swipe untuk Skrin Telefon ---
+
+    // Touch Swipe untuk Skrin Telefon
     let startX = 0;
     track.addEventListener("touchstart", (e) => {
       startX = e.touches[0].clientX;
@@ -113,10 +131,10 @@ document.addEventListener("DOMContentLoaded", () => {
     track.addEventListener("touchend", (e) => {
       const diff = startX - e.changedTouches[0].clientX;
       if (diff > 50) {
-        nextSlide(); // Leret ke kiri: paparan gambar seterusnya
+        nextSlide();
+        resetAutoSlide();
       } else if (diff < -50) {
-        prevSlide(); // Leret ke kanan: paparan gambar sebelumnya
+        prevSlide();
+        resetAutoSlide();
       }
     }, { passive: true });
-  }
-});
