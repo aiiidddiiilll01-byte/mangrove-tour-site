@@ -1,4 +1,4 @@
-/* ==========================================================================
+S/* ==========================================================================
    LANGKAWI EXPEDITION — V2 DESIGN SYSTEM
    Palette: Corporate #00293F | Warm Gold #d9b56c | WhatsApp #25D366
    ========================================================================== */
@@ -353,7 +353,7 @@ section {
 /* Value Props */
 .why-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 24px;
 }
 
@@ -839,9 +839,9 @@ footer {
     text-align: left;
   }
 
-  .why-grid, .lunch-grid, .footer-grid {
-    grid-template-columns: 1fr;
-  }
+.lunch-grid, .footer-grid {
+  grid-template-columns: 1fr;
+}
 
   .mobile-sticky-bar {
     display: block;
@@ -1049,5 +1049,14 @@ footer {
     background: #00293F;
     padding: 24px;
     gap: 18px;
+  }
+}
+@media (max-width: 480px) {
+  .why-card {
+    padding: 20px 16px;
+  }
+  .why-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
   }
 }
