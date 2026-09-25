@@ -49,6 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const prevBtn = document.getElementById("prevBtn");
   const nextBtn = document.getElementById("nextBtn");
   const dotsContainer = document.getElementById("carouselDots");
+  const container = document.querySelector(".carousel-container");
 
   if (track && slides.length > 0) {
     let currentIndex = 0;
@@ -90,10 +91,7 @@ document.addEventListener("DOMContentLoaded", () => {
       updateCarousel();
     }
 
-    if (nextBtn) nextBtn.addEventListener("click", nextSlide);
-    if (prevBtn) prevBtn.addEventListener("click", prevSlide);
-
-// Auto-slide setiap 5 saat
+    // Auto-slide setiap 5 saat
     let slideInterval = setInterval(nextSlide, 5000);
 
     function resetAutoSlide() {
@@ -101,6 +99,7 @@ document.addEventListener("DOMContentLoaded", () => {
       slideInterval = setInterval(nextSlide, 5000);
     }
 
+    // Navigasi Butang (Klik sekali sahaja bersama reset auto-slide)
     if (nextBtn) {
       nextBtn.addEventListener("click", () => {
         nextSlide();
@@ -116,7 +115,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Hentikan seketika auto-slide bila cursor berada atas gambar
-    const container = document.querySelector(".carousel-container");
     if (container) {
       container.addEventListener("mouseenter", () => clearInterval(slideInterval));
       container.addEventListener("mouseleave", () => resetAutoSlide());
@@ -138,3 +136,5 @@ document.addEventListener("DOMContentLoaded", () => {
         resetAutoSlide();
       }
     }, { passive: true });
+  }
+});
