@@ -4,20 +4,31 @@
 document.addEventListener("DOMContentLoaded", () => {
 // 1. Dynamic WhatsApp Routing with context-aware prefilled messaging
 const waLinks = document.querySelectorAll(".wa-link");
-  const isBM = window.location.pathname.includes("/bm") || window.location.pathname.endsWith("bm");
-  const phone = (typeof WHATSAPP_NUMBER !== "undefined" && WHATSAPP_NUMBER) ? WHATSAPP_NUMBER : "60199739836";
+const isBM = window.location.pathname.includes("/bm") || window.location.pathname.endsWith("bm");
+const phone = "60199739836";
 
-  waLinks.forEach((link) => {
-    const pkg = link.dataset.package || (isBM ? "Mangrove Tour Langkawi" : "Langkawi Mangrove Tour");
-    const defaultMsg = isBM
-      ? `Salam Langkawi Expedition, saya nak semak kekosongan untuk ${pkg}.`
-      : `Hi Langkawi Expedition, I would like to check availability for ${pkg}.`;
-    const encoded = encodeURIComponent(defaultMsg);
-    
-    link.href = `https://wa.me/${phone}?text=${encoded}`;
-    link.target = "_blank";
-    link.rel = "noopener noreferrer";
+waLinks.forEach((link) => {
+  const pkg = link.dataset.package || (isBM ? "Mangrove Tour Langkawi" : "Langkawi Mangrove Tour");
+  const defaultMsg = isBM
+    ? `Salam Langkawi Expedition, saya nak semak kekosongan untuk ${pkg}.`
+    : `Hi Langkawi Expedition, I would like to check availability for ${pkg}.`;
+  const encoded = encodeURIComponent(defaultMsg);
+  
+  link.href = `https://wa.me/${phone}?text=${encoded}`;
+  link.target = "_blank";
+  link.rel = "noopener noreferrer";
+
+  // Tambahan untuk hantar data ke Google Analytics bila butang WhatsApp ditekan
+  link.addEventListener("click", () => {
+    if (typeof gtag === "function") {
+      gtag("event", "whatsapp_click", {
+        package_name: pkg,
+        language: isBM ? "ms" : "en",
+        page_path: window.location.pathname
+      });
+    }
   });
+});
 
   // 2. Dynamic Year
   const yearEl = document.getElementById("year");
