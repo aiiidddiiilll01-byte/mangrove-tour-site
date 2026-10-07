@@ -43,4 +43,12 @@
   <changefreq>monthly</changefreq>
   <priority>0.8</priority>
 </url>
+
+<url>
+    <loc>https://www.langkawiexpedition.com/blog/3-must-visit-attractions-in-langkawi-2026</loc>
+    <lastmod>2026-10-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>
