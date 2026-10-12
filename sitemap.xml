@@ -4,7 +4,7 @@
   <!-- English Home Page -->
   <url>
     <loc>https://www.langkawiexpedition.com/</loc>
-    <lastmod>2026-08-27</lastmod>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.langkawiexpedition.com/" />
@@ -15,7 +15,7 @@
   <!-- Malay Home Page (BM) -->
   <url>
 <loc>https://www.langkawiexpedition.com/bm</loc>
-    <lastmod>2026-09-25</lastmod>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="ms" href="https://www.langkawiexpedition.com/bm" />
@@ -32,7 +32,7 @@
   </url>
 <url>
   <loc>https://www.langkawiexpedition.com/blog/kilim-mangrove-tour-group-guide</loc>
-  <lastmod>2026-09-29</lastmod>
+  <lastmod>2026-10-12</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.8</priority>
 </url>
@@ -46,7 +46,7 @@
 
 <url>
     <loc>https://www.langkawiexpedition.com/blog/3-must-visit-attractions-in-langkawi-2026</loc>
-    <lastmod>2026-10-07</lastmod>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
