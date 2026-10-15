@@ -16,12 +16,12 @@ waLinks.forEach((link) => {
     if (pkgLower.includes("fun fishing") || pkgLower.includes("fishing")) {
       defaultMsg = `Hai Langkawi Expedition, saya ingin menempah Fun Fishing Tour:\n• Date: \n• Time: `;
     } else if (pkgLower.includes("pakej a") || pkgLower.includes("pakej b") || pkgLower.includes("pakej c") || pkgLower.includes("private")) {
-      defaultMsg = `Salam Langkawi Expedition, saya ingin menempah ${pkg}:\n• Date: \n• Time: \n• Total Pax: `;
+      defaultMsg = `Hai Langkawi Expedition, saya ingin menempah ${pkg}:\n• Date: \n• Time: \n• Total Pax: `;
     } else if (pkgLower.includes("sharing") || pkgLower.includes("berkongsi")) {
-      defaultMsg = `Salam Langkawi Expedition, saya ingin menempah ${pkg}:\n• Date: \n• Dewasa: \n• Kanak-kanak: `;
+      defaultMsg = `Hai Langkawi Expedition, saya ingin menempah ${pkg}:\n• Date: \n• Dewasa: \n• Kanak-kanak: `;
     } else {
       // Tombol umum (Hero, Navigasi, Sticky Bar)
-      defaultMsg = `Salam Langkawi Expedition, saya ingin membuat tempahan:\n• Package: \n• Date: \n• Time: \n• Total Pax: `;
+      defaultMsg = `Hai Langkawi Expedition, saya ingin membuat tempahan:\n• Package: \n• Date: \n• Time: \n• Total Pax: `;
     }
   } else {
     if (pkgLower.includes("fun fishing") || pkgLower.includes("fishing")) {
