@@ -2,23 +2,46 @@
  * Langkawi Expedition V2 — Dynamic WhatsApp Routing, Navigation & Carousel
  */
 document.addEventListener("DOMContentLoaded", () => {
-// 1. Dynamic WhatsApp Routing with context-aware prefilled messaging
+// 1. Dynamic WhatsApp Routing dengan template Date, Time & Pax
 const waLinks = document.querySelectorAll(".wa-link");
 const isBM = window.location.pathname.includes("/bm") || window.location.pathname.endsWith("bm");
 const phone = "60199739836";
 
 waLinks.forEach((link) => {
-  const pkg = link.dataset.package || (isBM ? "Mangrove Tour Langkawi" : "Langkawi Mangrove Tour");
-  const defaultMsg = isBM
-    ? `Salam Langkawi Expedition, saya nak semak kekosongan untuk ${pkg}.`
-    : `Hi Langkawi Expedition, I would like to check availability for ${pkg}.`;
+  const pkg = link.dataset.package || (isBM ? "Mangrove Tour" : "Mangrove Tour");
+  const pkgLower = pkg.toLowerCase();
+  let defaultMsg = "";
+
+  if (isBM) {
+    if (pkgLower.includes("fun fishing") || pkgLower.includes("fishing")) {
+      defaultMsg = `Hai Langkawi Expedition, saya ingin menempah Fun Fishing Tour:\n• Date: \n• Time: `;
+    } else if (pkgLower.includes("pakej a") || pkgLower.includes("pakej b") || pkgLower.includes("pakej c") || pkgLower.includes("private")) {
+      defaultMsg = `Salam Langkawi Expedition, saya ingin menempah ${pkg}:\n• Date: \n• Time: \n• Total Pax: `;
+    } else if (pkgLower.includes("sharing") || pkgLower.includes("berkongsi")) {
+      defaultMsg = `Salam Langkawi Expedition, saya ingin menempah ${pkg}:\n• Date: \n• Dewasa: \n• Kanak-kanak: `;
+    } else {
+      // Tombol umum (Hero, Navigasi, Sticky Bar)
+      defaultMsg = `Salam Langkawi Expedition, saya ingin membuat tempahan:\n• Package: \n• Date: \n• Time: \n• Total Pax: `;
+    }
+  } else {
+    if (pkgLower.includes("fun fishing") || pkgLower.includes("fishing")) {
+      defaultMsg = `Hi Langkawi Expedition, I would like to book the Fun Fishing Tour:\n• Date: \n• Time: `;
+    } else if (pkgLower.includes("package a") || pkgLower.includes("package b") || pkgLower.includes("package c") || pkgLower.includes("private")) {
+      defaultMsg = `Hi Langkawi Expedition, I would like to book ${pkg}:\n• Date: \n• Time: \n• Total Pax: `;
+    } else if (pkgLower.includes("sharing")) {
+      defaultMsg = `Hi Langkawi Expedition, I would like to book the Sharing Mangrove Tour:\n• Date: \n• No. of Adults: \n• No. of Children: `;
+    } else {
+      // General Inquiry / Header / Hero buttons
+      defaultMsg = `Hi Langkawi Expedition, I would like to make a booking:\n• Package: \n• Date: \n• Time: \n• Total Pax: `;
+    }
+  }
+
   const encoded = encodeURIComponent(defaultMsg);
-  
   link.href = `https://wa.me/${phone}?text=${encoded}`;
   link.target = "_blank";
   link.rel = "noopener noreferrer";
 
-  // Tambahan untuk hantar data ke Google Analytics bila butang WhatsApp ditekan
+  // Google Analytics Event Tracking
   link.addEventListener("click", () => {
     if (typeof gtag === "function") {
       gtag("event", "whatsapp_click", {
