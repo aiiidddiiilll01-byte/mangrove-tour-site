@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // 1. Dynamic WhatsApp Routing dengan template Date, Time & Pax
 const waLinks = document.querySelectorAll(".wa-link");
 const isBM = window.location.pathname.includes("/bm") || window.location.pathname.endsWith("bm");
-const phone = "60199739836";
+const phone = "60109606904";
 
 waLinks.forEach((link) => {
   const pkg = link.dataset.package || (isBM ? "Mangrove Tour" : "Mangrove Tour");
