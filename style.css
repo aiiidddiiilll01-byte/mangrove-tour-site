@@ -1183,3 +1183,72 @@ footer {
   text-align: center;
   line-height: 1.4;
 }
+
+/* ==========================================================================
+   LEGAL PAGES (PRIVACY, TERMS & REFUND POLICY)
+   ========================================================================== */
+.legal-hero {
+  background: linear-gradient(180deg, var(--brand-navy) 0%, var(--brand-navy-light) 100%);
+  color: var(--text-inverse);
+  padding: 56px 0 44px;
+  text-align: center;
+}
+
+.legal-hero h1 {
+  color: var(--text-inverse);
+  font-size: clamp(28px, 4vw, 40px);
+  margin-bottom: 10px;
+}
+
+.legal-hero p {
+  color: var(--text-inverse-muted);
+  font-size: 14px;
+  font-family: var(--font-mono);
+}
+
+.legal-section {
+  padding: 56px 0 80px;
+}
+
+.legal-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 40px;
+  max-width: 840px;
+  margin: 0 auto;
+  box-shadow: var(--shadow-sm);
+}
+
+.legal-card h2 {
+  font-size: 20px;
+  margin: 28px 0 10px;
+  color: var(--brand-navy);
+}
+
+.legal-card h2:first-child {
+  margin-top: 0;
+}
+
+.legal-card p {
+  font-size: 15px;
+  color: var(--text-main);
+  margin-bottom: 14px;
+  line-height: 1.7;
+}
+
+.legal-card ul {
+  margin: 0 0 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 15px;
+  color: var(--text-main);
+  line-height: 1.65;
+}
+
+@media (max-width: 640px) {
+  .legal-card {
+    padding: 24px 20px;
+  }
+}
