@@ -1252,3 +1252,47 @@ footer {
     padding: 24px 20px;
   }
 }
+
+/* ==========================================================================
+   TRANSFER BANNER (FULL-WIDTH DARK STRIP)
+   ========================================================================== */
+.transfer-banner {
+  background-color: var(--brand-navy-dark);
+  padding: 44px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.transfer-banner-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.transfer-banner-text h2 {
+  color: var(--text-inverse);
+  font-size: clamp(24px, 3vw, 32px);
+  letter-spacing: 0.03em;
+  margin-bottom: 6px;
+}
+
+.transfer-banner-text p {
+  color: var(--text-inverse-muted);
+  font-size: 15px;
+  margin: 0;
+}
+
+.transfer-banner .btn {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .transfer-banner-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .transfer-banner .btn {
+    width: 100%;
+  }
